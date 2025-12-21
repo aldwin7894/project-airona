@@ -1,0 +1,19 @@
+gem:
+  exclude:
+    - rubocop
+    - rubocop-rails
+    - rubocop-performance
+    - rubocop-packaging
+    - rubocop-ast
+    - erb-formatter
+    - tzinfo-data
+    - sorbet
+    - tapioca
+    - ruby-lsp
+    - ruby-lsp-rails
+    - net-imap
+    - prism
+dsl:
+annotations:
+  typed_overrides:
+    graphql: "ignore"

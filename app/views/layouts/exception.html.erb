@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      <%= "Project Airona | Error - #{@status} (#{@response})" %>
+    </title>
+
+    <%= render partial: "layouts/meta", locals: { title: "Project Airona | Error - #{@status} (#{@response})", description: "Error" } %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag "exception", "data-turbo-track": "reload", defer: "defer" %>
+
+    <%= yield :head_content %>
+  </head>
+  <!-- Body -->
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project Airona</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="content-type" content="text/html"/>
+    <meta charset="UTF-8"/>
+
+    <%= render "layouts/favicon" %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag "admin", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <main>
+      <%= yield %>
+    </main>
+
+    <%= render partial: "partials/toasts" %>
+    <%= yield :page_script %>
+  </body>
+</html>

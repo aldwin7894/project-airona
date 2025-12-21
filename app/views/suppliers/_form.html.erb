@@ -1,0 +1,40 @@
+<%= form_with model: supplier, class: "flex flex-col gap-2", id: "supplier-form" do |form| %>
+  <% if supplier.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(supplier.errors.count, "error") %>
+        prohibited this supplier from being saved:</h2>
+
+      <ul>
+        <% supplier.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Name</span>
+    </div>
+    <%= form.text_field :name, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Contact Number</span>
+    </div>
+    <%= form.text_field :contact_number, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Address</span>
+    </div>
+    <%= form.text_field :address, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+<% end %>
+
+<div class="card-actions mt-4">
+  <input type="submit" value="Save" form="supplier-form" class="btn btn-primary">
+  <%= link_to "Cancel", suppliers_path, class: "btn btn-neutral" %>
+</div>
