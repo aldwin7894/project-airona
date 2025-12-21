@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="card bg-base-200 shadow-xl">
+  <div class="card-body">
+    <div class="card-title">
+      <h1 class="text-4xl font-bold">Supplier Details</h1>
+    </div>
+
+    <%= render @supplier %>
+
+    <div class="card-actions mt-4">
+      <%= link_to "Update supplier", edit_supplier_path(@supplier), class: "btn btn-primary" %>
+      <%= button_to "Delete supplier", @supplier, method: :delete, class: "btn btn-error" %>
+      <%= link_to "Back", suppliers_path, class: "btn btn-neutral" %>
+    </div>
+  </div>
+</div>

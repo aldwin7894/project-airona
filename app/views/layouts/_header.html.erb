@@ -1,0 +1,24 @@
+<nav class="navbar bg-primary sticky inset-x-0 top-0 z-10 flex h-[60px] items-center px-4 py-2">
+  <div class="flex-1">
+    <a href="/" class="btn btn-ghost text-xl text-white">Project Airona</a>
+    <%= link_to "Home", root_path, class: "btn btn-ghost text-xl text-white", target: "_top" %>
+    <%= link_to "Suppliers", suppliers_path, class: "btn btn-ghost text-xl text-white", target: "_top" %>
+    <%= link_to "Brands", brands_path, class: "btn btn-ghost text-xl text-white", target: "_top" %>
+    <%= link_to "Products", products_path, class: "btn btn-ghost text-xl text-white", target: "_top" %>
+    <%= link_to "Purchase Orders", purchase_orders_path, class: "btn btn-ghost text-xl text-white", target: "_top" %>
+    <%= link_to "Sales Orders", sales_orders_path, class: "btn btn-ghost text-xl text-white", target: "_top" %>
+    <%= link_to "Inventory", inventories_path, class: "btn btn-ghost text-xl text-white", target: "_top" %>
+  </div>
+  <div class="flex flex-none flex-row items-center gap-2">
+    <button class="swap swap-flip" data-toggle-theme="dark,cupcake" data-act-class="swap-active">
+      <div class="swap-on">
+        <iconify-icon width="32" icon="mdi:white-balance-sunny" class="text-white">
+        </iconify-icon>
+      </div>
+      <div class="swap-off">
+        <iconify-icon width="32" icon="mdi:weather-night" class="text-black">
+        </iconify-icon>
+      </div>
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,94 @@
+{
+  "files.associations": {
+    "*.html.erb": "erb"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true
+  },
+  "[erb]": {
+    "editor.defaultFormatter": "elia.erb-formatter",
+    "editor.formatOnSave": true
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.codeActions": true,
+  "tailwindCSS.colorDecorators": true,
+  "tailwindCSS.hovers": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "formattingToggle.affects": [
+    "editor.formatOnSave"
+  ],
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "html": "html",
+    "erb": "html"
+  },
+  "git.enableCommitSigning": true,
+  "sonarlint.connectedMode.project": {
+    "connectionId": "aldwin7894",
+    "projectKey": "aldwin7894:project-airona"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "emmet.includeLanguages": {
+    "*.html.erb": "html",
+    "erb": "html"
+  },
+  "erb-formatter.lineLength": 500,
+  "rubyLsp.formatter": "rubocop",
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true,
+    "signatureHelp": true
+  },
+  "rubyLsp.pullDiagnosticsOn": "both",
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "auto"
+  },
+  "sorbet.enabled": true,
+  "sorbet.highlightUntyped": "nowhere",
+  "eslint.format.enable": true,
+  "eslint.useFlatConfig": true,
+  "eslint.validate": [
+    "json",
+    "javascript"
+  ],
+  "sorbet.userLspConfigs": [
+    {
+      "id": "custom-build",
+      "name": "Custom Sorbet Build",
+      "description": "",
+      "env": {
+        "SRB_SORBET_EXE": "bin/sorbet"
+      },
+      "command": [
+        "bundle",
+        "exec",
+        "srb",
+        "typecheck",
+        "--lsp"
+      ]
+    }
+  ]
+}

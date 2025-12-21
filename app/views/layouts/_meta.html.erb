@@ -1,0 +1,26 @@
+<% title ||= "Project Airona" %>
+
+<meta name="application-name" content="<%= title %>"/>
+<meta name="description" content="<%= description %>">
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="content-type" content="text/html"/>
+<meta charset="UTF-8"/>
+<meta name="keywords" content="aldwin7894, project-airona">
+<meta name="author" content="aldwin7894">
+
+<meta property="og:title" content="<%= title %>">
+<meta property="og:description" content="<%= description %>">
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%= url_for(host: ENV.fetch("RAILS_HOST")) %>">
+<meta property="og:image" content="<%= ENV.fetch("RAILS_HOST") %>/favicon-196x196.png">
+<meta property="og:site_name" content="Project Airona">
+
+<meta property="twitter:card" content="summary">
+<meta property="twitter:title" content="<%= title %>">
+<meta property="twitter:description" content="<%= description %>">
+<meta property="twitter:image" content="<%= ENV.fetch("RAILS_HOST") %>/favicon-196x196.png">
+
+<link rel="canonical" href="<%= url_for(host: ENV.fetch("RAILS_HOST")) %>">
+
+<%= render "layouts/favicon" %>
+<%= render "layouts/preconnect" %>
