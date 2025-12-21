@@ -1,0 +1,77 @@
+<%= form_with model: purchase_order, data: { controller: "nested-form", nested_form_wrapper_selector_value: ".nested-form-wrapper"}, class: "flex flex-col gap-2", id: "purchase_order-form" do |form| %>
+  <% if purchase_order.errors.any? %>
+    <div class="text-red-600">
+      <h2><%= pluralize(purchase_order.errors.count, "error") %>
+        prohibited this supplier from being saved:</h2>
+
+      <ul>
+        <% purchase_order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Supplier</span>
+    </div>
+    <%= form.select :supplier_id, @suppliers, { include_blank: "Select Supplier" }, { class: "select select-bordered w-full max-w-xs" } %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Order Number</span>
+    </div>
+    <%= form.text_field :order_number, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Order Date</span>
+    </div>
+    <%= form.date_field :order_date, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <table class="table table-zebra table-md w-full">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th>Discount</th>
+        <th>Tax</th>
+        <th>Total Amount</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <template data-nested-form-target="template">
+        <%= form.fields_for :purchase_order_items, PurchaseOrderItem.new, child_index: 'NEW_RECORD' do |f| %>
+          <%= render "purchase_order_item_fields", form: f %>
+        <% end %>
+      </template>
+
+      <%= form.fields_for :purchase_order_items do |f| %>
+        <%= render "purchase_order_item_fields", form: f %>
+      <% end %>
+
+      <tr data-nested-form-target="target">
+        <td colspan="5"></td>
+        <td>
+          <button type="button" data-action="nested-form#add" class="btn btn-primary max-w-xs ml-auto">
+            <iconify-icon icon="mdi:plus" width="24"></iconify-icon>
+            Add Item
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<% end %>
+
+<div class="card-actions mt-4">
+  <input type="submit" value="Save" form="purchase_order-form" class="btn btn-primary">
+  <%= link_to "Cancel", purchase_orders_path, class: "btn btn-neutral" %>
+</div>

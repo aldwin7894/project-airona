@@ -1,0 +1,26 @@
+<nav class="navbar bg-primary sticky inset-x-0 top-0 z-10 h-[60px] px-4 py-2">
+  <div class="navbar-start">
+    <%= link_to @project_name.titleize, root_path, class: "btn btn-ghost text-xl text-white", target: "_top" %>
+  </div>
+
+  <div class="navbar-center flex">
+    <ul class="menu menu-horizontal px-1 text-white">
+      <%= render "layouts/header_items" %>
+    </ul>
+  </div>
+
+  <div class="navbar-end">
+    <div class="flex flex-none flex-row items-center gap-2">
+      <button class="swap swap-flip" data-toggle-theme="dark,cupcake" data-act-class="swap-active">
+        <div class="swap-on">
+          <iconify-icon width="32" icon="mdi:white-balance-sunny" class="text-white">
+          </iconify-icon>
+        </div>
+        <div class="swap-off">
+          <iconify-icon width="32" icon="mdi:weather-night" class="text-black">
+          </iconify-icon>
+        </div>
+      </button>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,157 @@
+# Omakase Ruby styling for Rails
+inherit_gem:
+  rubocop-rails-omakase: rubocop.yml
+
+plugins:
+  - rubocop-packaging
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - app/frontend/**/*
+    - app/views/**/*.erb
+    - "**/log/**/*"
+    - "**/public/**/*"
+    - "**/tmp/**/*"
+    - "**/templates/**/*"
+    - "**/vendor/**/*"
+    - actionpack/lib/action_dispatch/journey/parser.rb
+    - actionmailbox/test/dummy/**/*
+    - actiontext/test/dummy/**/*
+    - "**/node_modules/**/*"
+    - "**/bin/**/*"
+    - "**/config/**/*"
+    - "**/db/**/*"
+    - "**/sorbet/rbi/**/*"
+    - Gemfile
+    - Rakefile
+    - config.ru
+
+# Align the arguments of a method call if they span more than one line.
+Layout/ArgumentAlignment:
+  Enabled: true
+  EnforcedStyle: with_fixed_indentation
+
+# Checks the indentation of the first line of the right-hand-side of a multi-line assignment
+Layout/AssignmentIndentation:
+  Enabled: true
+
+# Align ends corresponding to begins correctly.
+Layout/BeginEndAlignment:
+  Enabled: true
+
+# Align block ends correctly.
+Layout/BlockAlignment:
+  Enabled: true
+
+# Align `when` with `case`.
+Layout/CaseIndentation:
+  Enabled: true
+
+Layout/ClosingHeredocIndentation:
+  Enabled: true
+
+# Align comments with method definitions.
+Layout/CommentIndentation:
+  Enabled: true
+
+# Align `end` with the matching keyword or starting expression except for
+# assignments, where it should be aligned with the LHS.
+Layout/EndAlignment:
+  Enabled: true
+  EnforcedStyleAlignWith: keyword
+  AutoCorrect: true
+
+Layout/ElseAlignment:
+  Enabled: true
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
+
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+  EnforcedStyle: only_before
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+
+# In a regular class definition, no empty lines around the body.
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+# In a regular method definition, no empty lines around the body.
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: true
+
+# In a regular module definition, no empty lines around the body.
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+
+# Use Ruby >= 1.9 syntax for hashes. Prefer { a: :b } over { :a => :b }.
+Style/HashSyntax:
+  Enabled: true
+
+Layout/FirstArgumentIndentation:
+  Enabled: true
+
+# Method definitions after `private` or `protected` isolated calls need one
+# extra level of indentation.
+Layout/IndentationConsistency:
+  Enabled: true
+  EnforcedStyle: indented_internal_methods
+
+# Two spaces, no tabs (for indentation).
+Layout/IndentationWidth:
+  Enabled: true
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented_relative_to_receiver
+
+Layout/LeadingCommentSpace:
+  Enabled: true
+
+Layout/SpaceAfterColon:
+  Enabled: true
+
+Layout/SpaceAfterComma:
+  Enabled: true
+
+Layout/SpaceAfterSemicolon:
+  Enabled: true
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+
+Layout/SpaceAroundKeyword:
+  Enabled: true
+
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+Layout/SpaceBeforeComma:
+  Enabled: true
+
+Layout/SpaceBeforeComment:
+  Enabled: true
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always
+  SafeAutoCorrect: true
+  Exclude:
+    - actionview/test/**/*.builder
+    - actionview/test/**/*.ruby
+    - actionpack/test/**/*.builder
+    - actionpack/test/**/*.ruby
+    - activestorage/db/migrate/**/*.rb
+    - activestorage/db/update_migrate/**/*.rb
+    - actionmailbox/db/migrate/**/*.rb
+    - actiontext/db/migrate/**/*.rb
+
+Style/RedundantFreeze:
+  Enabled: true

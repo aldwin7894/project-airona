@@ -1,0 +1,35 @@
+<% content_for :title, "Inventories" %>
+
+<p class="text-green-600"><%= notice %></p>
+
+<h1 class="text-4xl font-bold">Inventories</h1>
+
+<div class="w-full flex flex-row justify-end gap-2">
+  <%= link_to "New inventory", new_inventory_path, class: "btn btn-primary" %>
+</div>
+
+<div class="overflow-x-auto rounded-box border-2 border-base-content/5 bg-base-100">
+  <table class="table table-zebra table-lg" id="inventories">
+    <thead>
+      <tr class="bg-base-300 text-base-content">
+        <th>Brand Name</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Selling Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @inventories.each do |inventory| %>
+        <tr class="hover">
+          <td><%= inventory.product.brand.name %></td>
+          <td><%= inventory.product.name %></td>
+          <td><%= inventory.quantity %></td>
+          <td><%= number_to_currency(inventory.selling_price, unit: "₱") %></td>
+          <td><%= link_to "View", inventory, class: "btn btn-primary" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

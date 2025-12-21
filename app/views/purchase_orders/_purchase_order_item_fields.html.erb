@@ -1,0 +1,41 @@
+<tr class="nested-form-wrapper" data-new-record="<%= form.object.new_record? %>" x-data="{ unit_price: 0, quantity: 1, discount: 0 }">
+  <td>
+    <%= form.select :product_id, @products, { include_blank: "Select Product" }, { class: "select select-bordered w-full max-w-xs" } %>
+  </td>
+
+  <td>
+    <div class="w-full flex flex-row gap-2 items-center">
+      <span class="text-2xl">₱</span>
+      <%= form.number_field :unit_price, value: 0, min: 0.00, "x-model": "unit_price", class: "input input-bordered w-full max-w-xs" %>
+    </div>
+  </td>
+
+  <td>
+    <%= form.number_field :quantity, value: 1, min: 1, "x-model": "quantity", class: "input input-bordered w-full max-w-xs" %>
+  </td>
+
+  <td>
+    <div class="w-full flex flex-row gap-2 items-center">
+      <span class="text-2xl">₱</span>
+      <%= form.number_field :discount_amount, value: 0, min: 0.00, "x-model": "discount", class: "input input-bordered w-full max-w-xs" %>
+    </div>
+  </td>
+
+  <td>
+    <div class="flex flex-row gap-2 items-center">
+      <span class="text-2xl">₱</span>
+      <%= form.number_field :tax_amount, value: 0, min: 0.00, class: "input input-bordered w-full max-w-xs" %>
+    </div>
+  </td>
+
+  <td>
+    <span class="text-2xl" x-text="'₱ ' + ((Number(unit_price) * Number(quantity)) - (Number(discount) * Number(quantity))).toLocaleString('en-PH', { minimumFractionDigits: 2 })"></span>
+  </td>
+
+  <td>
+    <button type="button" data-action="nested-form#remove" class="btn btn-error">
+      <iconify-icon icon="mdi:delete" width="24"></iconify-icon>
+    </button>
+    <%= form.hidden_field :_destroy %>
+  </td>
+</tr>
