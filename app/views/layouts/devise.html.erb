@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% title = content_for(:title) || @project_name.titleize || "Project Airona" %>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="content-type" content="text/html"/>
+    <meta charset="UTF-8"/>
+
+    <%= render "layouts/favicon" %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag "application" %>
+  </head>
+
+  <body class="overflow-x-hidden antialiased">
+    <%= render "layouts/loader" %>
+
+    <main class="hidden w-full h-full overflow-x-clip" id="main">
+      <%= yield %>
+    </main>
+
+    <%= render partial: "partials/toasts" %>
+    <%= yield :page_script %>
+  </body>
+</html>

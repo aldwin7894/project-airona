@@ -1,0 +1,16 @@
+<p class="text-green-600"><%= notice %></p>
+
+<div class="card bg-base-200 shadow-xl">
+  <div class="card-body">
+    <div class="card-title">
+      <h1 class="text-4xl font-bold">Inventory Details</h1>
+    </div>
+
+    <%= render @inventory %>
+
+    <div class="card-actions mt-4">
+      <%= link_to "Update inventory", edit_inventory_path(@inventory), class: "btn btn-primary" %>
+      <%= link_to "Back", inventories_path, class: "btn btn-neutral" %>
+    </div>
+  </div>
+</div>

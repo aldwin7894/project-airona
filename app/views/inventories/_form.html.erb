@@ -1,0 +1,50 @@
+<%= form_with model: inventory, class: "flex flex-col gap-2", id: "inventory-form" do |form| %>
+  <% if inventory.errors.any? %>
+    <div class="text-red-600">
+      <h2><%= pluralize(inventory.errors.count, "error") %>
+        prohibited this inventory from being saved:</h2>
+
+      <ul>
+        <% inventory.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Product</span>
+    </div>
+    <%= form.select :product_id, @products, { include_blank: "Select Product" }, { class: "select select-bordered w-full max-w-xs", disabled: (action_name == "edit") } %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Inventory Type</span>
+    </div>
+    <%= form.select :inventory_type, @inventory_types, { include_blank: "Select Supplier" }, { class: "select select-bordered w-full max-w-xs" } %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Quantity</span>
+    </div>
+    <%= form.number_field :quantity, min: 1, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Selling Price</span>
+    </div>
+    <div class="w-full flex flex-row gap-2 items-center">
+      <span class="text-2xl">₱</span>
+      <%= form.number_field :selling_price, min: 0.00, class: "input input-bordered w-full max-w-xs" %>
+    </div>
+  </label>
+<% end %>
+
+<div class="card-actions mt-4">
+  <input type="submit" value="Save" form="inventory-form" class="btn btn-primary">
+  <%= link_to "Cancel", inventories_path, class: "btn btn-neutral" %>
+</div>

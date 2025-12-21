@@ -1,0 +1,16 @@
+[
+  {
+    "label": "RUN LOCAL",
+    "commands": [
+      {
+        "name": "RAILS SERVER",
+        "main": true,
+        "script": "yarn rails:dev"
+      },
+      {
+        "name": "VITE",
+        "script": "yarn vite:dev"
+      }
+    ]
+  }
+]

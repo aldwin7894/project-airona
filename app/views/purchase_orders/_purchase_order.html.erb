@@ -1,0 +1,47 @@
+<div id="<%= dom_id purchase_order %>" class="flex flex-col gap-2">
+  <div>
+    <strong>Supplier Name:</strong>
+    <%= purchase_order.supplier.name %>
+  </div>
+
+  <div>
+    <strong>Order No.:</strong>
+    <%= purchase_order.order_number %>
+  </div>
+
+  <div>
+    <strong>Order Date:</strong>
+    <%= Time.zone.at(purchase_order.order_date.in_time_zone.to_i).strftime("%B %d, %Y") %>
+  </div>
+
+  <div>
+    <strong>Total Amount:</strong>
+    <%= number_to_currency(purchase_order.total_amount, unit: "₱") %>
+  </div>
+
+  <table class="table table-zebra table-md w-full">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th>Discount</th>
+        <th>Tax</th>
+        <th>Total Amount</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% purchase_order.purchase_order_items.map do |item| %>
+        <tr class="hover">
+          <td><%= item.product.name %></td>
+          <td><%= number_to_currency(item.unit_price, unit: "₱") %></td>
+          <td><%= item.quantity %></td>
+          <td><%= number_to_currency(item.discount_amount, unit: "₱") %></td>
+          <td><%= number_to_currency(item.tax_amount, unit: "₱") %></td>
+          <td><%= number_to_currency(item.total_amount, unit: "₱") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

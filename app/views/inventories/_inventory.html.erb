@@ -1,0 +1,21 @@
+<div id="<%= dom_id inventory %>" class="flex flex-col gap-2">
+  <div>
+    <strong>Brand Name:</strong>
+    <%= inventory.product.brand.name %>
+  </div>
+
+  <div>
+    <strong>Product Name:</strong>
+    <%= inventory.product.name %>
+  </div>
+
+  <div>
+    <strong>Quantity:</strong>
+    <%= inventory.quantity %>
+  </div>
+
+  <div>
+    <strong>Selling Price:</strong>
+    <%= number_to_currency(inventory.selling_price, unit: "₱") %>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% title = content_for(:title) || @project_name.titleize || "Project Airona" %>
+    <% description = "Project Description" %>
+
+    <title><%= title %></title>
+    <%= render partial: "layouts/meta", locals: { title:, description: } %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag "application", defer: "defer" %>
+
+    <%= yield :head_content %>
+  </head>
+
+  <body class="overflow-x-hidden antialiased">
+    <%= render "layouts/content" %>
+  </body>
+</html>

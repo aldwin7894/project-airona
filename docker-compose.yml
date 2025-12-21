@@ -1,0 +1,86 @@
+services:
+  db:
+    container_name: project-airona-mongo
+    image: mongo:8.2.3
+    restart: always
+    environment:
+      - TZ
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
+    ports:
+      - 27027:27017
+    volumes:
+      - dbdata:/data/db
+  redis:
+    container_name: project-airona-redis
+    image: redis:alpine
+    restart: always
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping", "||", "exit", "1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      - TZ
+    ports:
+      - 6389:6379
+    volumes:
+      - ./config/redis:/usr/local/etc/redis
+      - redis:/data
+
+  web:
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    #   x-bake:
+    #     platforms:
+    #       - linux/amd64
+    #       - linux/arm64
+    #   secrets:
+    #     - TZ
+    #     - RAILS_ENV
+    #     - NODE_ENV
+    #     - RAILS_MASTER_KEY
+    #     - RAILS_ASSET_HOST
+    container_name: project-airona-app
+    image: aldwin7894/project-airona:prod
+    restart: always
+    depends_on:
+      - db
+      - redis
+    ports:
+      - 3010:3000
+    environment:
+      - DATABASE_URL=mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@db:27027/${MONGO_DB}
+      - REDIS_URL=redis://redis:6389
+      - TZ
+      - RAILS_MASTER_KEY
+      - RAILS_ENV
+      - NODE_ENV
+      - RAILS_ASSET_HOST
+      - RACK_TIMEOUT_SERVICE_TIMEOUT=60
+      - RACK_TIMEOUT_WAIT_TIMEOUT=60
+      - RUBY_GC_HEAP_GROWTH_FACTOR=1.1
+      - RUBY_GC_MALLOC_LIMIT=4000100
+      - RUBY_GC_MALLOC_LIMIT_GROWTH_FACTOR=1.1
+      - RUBY_GC_MALLOC_LIMIT_MAX=16000100
+      - RUBY_GC_OLDMALLOC_LIMIT=16000100
+      - RUBY_GC_OLDMALLOC_LIMIT_MAX=16000100
+      - VITE_RUBY_SKIP_ASSETS_PRECOMPILE_EXTENSION=true
+
+volumes:
+  dbdata:
+  redis:
+
+secrets:
+  TZ:
+    environment: TZ
+  RAILS_ENV:
+    environment: RAILS_ENV
+  NODE_ENV:
+    environment: NODE_ENV
+  RAILS_MASTER_KEY:
+    environment: RAILS_MASTER_KEY
+  RAILS_ASSET_HOST:
+    environment: RAILS_ASSET_HOST

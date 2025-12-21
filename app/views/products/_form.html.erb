@@ -1,0 +1,86 @@
+<%= form_with model: product, class: "flex flex-col gap-2", id: "product-form" do |form| %>
+  <% if product.errors.any? %>
+    <div class="text-red-600">
+      <h2><%= pluralize(product.errors.count, "error") %>
+        prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Brand</span>
+    </div>
+    <%= form.select :brand_id, @brands, { include_blank: "Select Brand" }, { class: "select select-bordered w-full max-w-xs" } %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">SKU</span>
+    </div>
+    <%= form.text_field :sku, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Name</span>
+    </div>
+    <%= form.text_field :name, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Description</span>
+    </div>
+    <%= form.textarea :description, class: "textarea textarea-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Color</span>
+    </div>
+    <%= form.text_field :color, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Size</span>
+    </div>
+    <%= form.text_field :size, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Type</span>
+    </div>
+    <%= form.text_field :type, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Unit of Measurement</span>
+    </div>
+    <%= form.text_field :uom, class: "input input-bordered w-full max-w-xs" %>
+  </label>
+
+  <label class="form-control w-full max-w-xs flex">
+    <div class="label">
+      <span class="label-text">Unit Price</span>
+    </div>
+
+    <div class="w-full flex flex-row gap-2 items-center">
+      <span class="text-2xl">₱</span>
+      <%= form.number_field :price, min: 0.00, class: "input input-bordered w-full max-w-xs" %>
+    </div>
+  </label>
+<% end %>
+
+<div class="card-actions mt-4">
+  <input type="submit" value="Save" form="product-form" class="btn btn-primary">
+  <%= link_to "Cancel", products_path, class: "btn btn-neutral" %>
+</div>

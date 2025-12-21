@@ -1,0 +1,35 @@
+<% content_for :title, "Purchase Orders" %>
+
+<p class="text-green-600"><%= notice %></p>
+
+<h1 class="text-4xl font-bold">Purchase Orders</h1>
+
+<div class="w-full flex flex-row justify-end gap-2">
+  <%= link_to "New purchase order", new_purchase_order_path, class: "btn btn-primary" %>
+</div>
+
+<div class="overflow-x-auto rounded-box border-2 border-base-content/5 bg-base-100">
+  <table class="table table-zebra table-lg" id="suppliers">
+    <thead>
+      <tr class="bg-base-300 text-base-content">
+        <th>Supplier Name</th>
+        <th>Order No.</th>
+        <th>Order Date</th>
+        <th>Total Amount</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @purchase_orders.each do |purchase_order| %>
+        <tr class="hover">
+          <td><%= purchase_order.supplier.name %></td>
+          <td><%= purchase_order.order_number %></td>
+          <td><%= purchase_order.order_date %></td>
+          <td><%= purchase_order.total_amount %></td>
+          <td><%= link_to "View", purchase_order, class: "btn btn-primary" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

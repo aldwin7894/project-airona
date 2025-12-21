@@ -1,0 +1,17 @@
+<p class="text-green-600"><%= notice %></p>
+
+<div class="card bg-base-200 shadow-xl">
+  <div class="card-body">
+    <div class="card-title">
+      <h1 class="text-4xl font-bold">Purchase Order Details</h1>
+    </div>
+
+    <%= render @purchase_order %>
+
+    <div class="card-actions mt-4">
+      <%= link_to "Update purchase order", edit_purchase_order_path(@purchase_order), class: "btn btn-primary" %>
+      <%= button_to "Delete purchase order", @purchase_order, method: :delete, class: "btn btn-error" %>
+      <%= link_to "Back", purchase_orders_path, class: "btn btn-neutral" %>
+    </div>
+  </div>
+</div>
