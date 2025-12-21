@@ -1,0 +1,22 @@
+<%= render "layouts/loader" %>
+<%= render "layouts/header" %>
+
+<main class="hidden w-full h-full overflow-x-clip" id="main">
+  <div class="min-h-[calc(100vh-64px)] w-full">
+    <%= yield :outside_container %>
+
+    <div class="container mx-auto overflow-x-auto overflow-y-hidden pt-5">
+      <%= yield %>
+    </div>
+  </div>
+</main>
+
+<footer class="dark:text-[#bfb3a4] text-gray-400 p-4 bg-[#151515] shadow md:flex md:items-center md:justify-between md:p-6 hidden" id="footer">
+  <div class="container flex flex-row gap-2 xs:flex-col">
+    <span class="flex-1 text-sm xs:text-center xs:order-3">© 2022-<%= Time.zone.now.year %>
+      aldwin7894. All Rights Reserved.</span>
+  </div>
+</footer>
+
+<%= render partial: "partials/toasts" %>
+<%= yield :page_script %>

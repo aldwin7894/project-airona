@@ -1,0 +1,29 @@
+<% content_for :title, "Brands" %>
+
+<p class="text-green-600"><%= notice %></p>
+
+<h1 class="text-4xl font-bold">Brands</h1>
+
+<div class="w-full flex flex-row justify-end gap-2">
+  <%= link_to "New brand", new_brand_path, class: "btn btn-primary" %>
+</div>
+
+<div class="overflow-x-auto rounded-box border-2 border-base-content/5 bg-base-100">
+  <table class="table table-zebra table-lg" id="brands">
+    <thead>
+      <tr class="bg-base-300 text-base-content">
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @brands.each do |brand| %>
+        <tr class="hover">
+          <td><%= brand.name %></td>
+          <td><%= link_to "View", brand, class: "btn btn-primary" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

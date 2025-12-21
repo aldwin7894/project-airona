@@ -1,0 +1,32 @@
+<main class="w-full h-full overflow-x-clip" x-data="">
+  <section class="background-1 w-screen h-screen">
+    <div class="w-full h-full py-12 bg-gradient-to-br from-cyan-700/50 to-pink-500/50">
+      <div class="container w-full h-full px-12 py-6 overflow-hidden rounded-lg laptop:flex phone:landscape:flex phone:landscape:items-center laptop:items-center laptop:gap-12 laptop:py-0 bg-bg--light/80 dark:bg-black/90">
+        <div class="w-full laptop:w-1/2 laptop:order-1 text-text--light dark:text-text--dark">
+          <p class="font-serif error-text animate-pulse">
+            <%= @status %>
+          </p>
+          <div class="flex items-center gap-2 font-sans text-xl font-bold break-words">
+            <%= @response %>
+            <iconify-icon icon="ic:twotone-error" class="text-red-400"></iconify-icon>
+          </div>
+          <p class="font-sans line-clamp-6">
+            <%= details[:message] %>
+          </p>
+
+          <div class="flex items-center mt-6 gap-x-3">
+            <%= link_to :back, class: "gap-x-2 sm:w-auto dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:border-gray-700 flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg" do %>
+              <iconify-icon icon="ic:baseline-arrow-back"></iconify-icon>
+              <span class="whitespace-nowrap">Go back</span>
+            <% end %>
+
+            <%= link_to root_path, class: "gap-x-2 sm:w-auto hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600 w-1/2 px-5 py-2 text-sm tracking-wide flex items-center justify-center text-white transition-colors duration-200 bg-blue-500 rounded-lg" do %>
+              <iconify-icon icon="ic:baseline-home"></iconify-icon>
+              <span class="whitespace-nowrap">Take me home</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

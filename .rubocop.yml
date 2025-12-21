@@ -1,0 +1,26 @@
+# Omakase Ruby styling for Rails
+inherit_gem:
+  rubocop-rails-omakase: rubocop.yml
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - app/frontend/**/*
+    - app/views/**/*.erb
+    - "**/log/**/*"
+    - "**/public/**/*"
+    - "**/tmp/**/*"
+    - "**/templates/**/*"
+    - "**/vendor/**/*"
+    - actionpack/lib/action_dispatch/journey/parser.rb
+    - actionmailbox/test/dummy/**/*
+    - actiontext/test/dummy/**/*
+    - "**/node_modules/**/*"
+    - "**/bin/**/*"
+    - "**/config/**/*"
+    - "**/db/**/*"
+    - "**/sorbet/rbi/**/*"
+    - Gemfile
+    - Rakefile
+    - config.ru
