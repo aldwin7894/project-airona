@@ -1,5 +1,6 @@
-require_relative "boot"
+# frozen_string_literal: true
 
+require_relative "boot"
 require "rails"
 require "action_controller/railtie" rescue LoadError
 require "action_view/railtie" rescue LoadError

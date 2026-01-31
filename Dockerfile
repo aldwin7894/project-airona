@@ -12,8 +12,8 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
   ruby-dev \
   tar \
   wget \
-  && curl --proto "=https" -fsSL https://deb.nodesource.com/setup_lts.x | bash -s -- ${NODE_VERSION} \
-  && apt-get install -yq --no-install-recommends nodejs=${NODE_VERSION}-1nodesource1 \
+  && curl --proto "=https" -fsSL https://deb.nodesource.com/setup_lts.x | bash -s -- "${NODE_VERSION}" \
+  && apt-get install -yq --no-install-recommends nodejs="${NODE_VERSION}-1nodesource1" \
   && corepack enable \
   && corepack prepare yarn@stable --activate \
   && npm i -g --ignore-scripts npm \
@@ -33,7 +33,8 @@ COPY storage/ ./storage/
 COPY test/ ./test/
 COPY tmp/ ./tmp/
 COPY vendor/ ./vendor/
-COPY Gemfile* .
+COPY Gemfile .
+COPY Gemfile.lock .
 COPY yarn.lock .
 COPY .* .
 COPY *.js .
@@ -88,7 +89,7 @@ ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
 EXPOSE 3000
 
 HEALTHCHECK --interval=5m --timeout=10s --retries=5 --start-period=10s  \
-  CMD ["wget", "--no-verbose", "--tries=1", "--spider", "http://web:3000/ping"]
+  CMD ["wget", "--no-verbose", "--tries=1", "--spider", "http://web:3000/up"]
 
 # Configure the main process to run when running the image
 CMD ["bin/rails", "s", "-b", "0.0.0.0"]

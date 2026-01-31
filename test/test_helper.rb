@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
+
+ENV["RAILS_ENV"] ||= "test"
 
 module ActiveSupport
   class TestCase

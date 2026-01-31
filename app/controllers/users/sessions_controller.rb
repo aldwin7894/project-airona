@@ -22,7 +22,7 @@ class Users::SessionsController < Devise::SessionsController
     else
       @error = "Invalid username or password"
       self.resource = resource_class.new(sign_in_params)
-      render :new and return
+      render :new, status: :unauthorized
     end
   end
 
