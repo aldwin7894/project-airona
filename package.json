@@ -52,7 +52,7 @@
     "@eslint/js": "^9.39.2",
     "@types/node": "^25.2.0",
     "@typescript-eslint/parser": "^8.50.0",
-    "daisyui": "v4",
+    "daisyui": "v5",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-alias": "^1.1.2",
