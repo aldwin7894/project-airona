@@ -40,7 +40,7 @@
     "stimulus-vite-helpers": "^3.1.0",
     "tailwindcss": "^3.4.19",
     "tailwindcss-animatecss": "^3.0.5",
-    "terser": "^5.44.1",
+    "terser": "^5.46.0",
     "tippy.js": "^6.3.7",
     "vite": "^7.3.0",
     "vite-plugin-full-reload": "^1.2.0",
