@@ -9,33 +9,151 @@
 </div>
 
 <div class="overflow-x-auto rounded-box border-2 border-base-content/5 bg-base-100">
-  <table class="table table-zebra table-lg" id="products">
+  <table class="table table-zebra table-lg" id="products" x-data="products">
     <thead>
       <tr class="bg-base-300 text-base-content">
-        <th>Brand</th>
-        <th>Name</th>
-        <th>Color</th>
-        <th>Size</th>
-        <th>Type</th>
-        <th>Unit Price</th>
-        <th>UOM</th>
+        <th @click="sort('brand_name')" class="cursor-pointer">
+          <div class="flex flex-row items-center gap-1">
+            Brand
+            <template x-if="sortCol === 'brand_name' && !sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-down" class="text-white">
+              </iconify-icon>
+            </template>
+            <template x-if="sortCol === 'brand_name' && sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-up" class="text-white">
+              </iconify-icon>
+            </template>
+          </div>
+        </th>
+        <th @click="sort('name')" class="cursor-pointer">
+          <div class="flex flex-row items-center gap-1">
+            Name
+            <template x-if="sortCol === 'name' && !sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-down" class="text-white">
+              </iconify-icon>
+            </template>
+            <template x-if="sortCol === 'name' && sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-up" class="text-white">
+              </iconify-icon>
+            </template>
+          </div>
+        </th>
+        <th @click="sort('color')" class="cursor-pointer">
+          <div class="flex flex-row items-center gap-1">
+            Color
+            <template x-if="sortCol === 'color' && !sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-down" class="text-white">
+              </iconify-icon>
+            </template>
+            <template x-if="sortCol === 'color' && sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-up" class="text-white">
+              </iconify-icon>
+            </template>
+          </div>
+        </th>
+        <th @click="sort('size')" class="cursor-pointer">
+          <div class="flex flex-row items-center gap-1">
+            Size
+            <template x-if="sortCol === 'size' && !sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-down" class="text-white">
+              </iconify-icon>
+            </template>
+            <template x-if="sortCol === 'size' && sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-up" class="text-white">
+              </iconify-icon>
+            </template>
+          </div>
+        </th>
+        <th @click="sort('type')" class="cursor-pointer">
+          <div class="flex flex-row items-center gap-1">
+            Type
+            <template x-if="sortCol === 'type' && !sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-down" class="text-white">
+              </iconify-icon>
+            </template>
+            <template x-if="sortCol === 'type' && sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-up" class="text-white">
+              </iconify-icon>
+            </template>
+          </div>
+        </th>
+        <th @click="sort('price')" class="cursor-pointer">
+          <div class="flex flex-row items-center gap-1">
+            Unit Price
+            <template x-if="sortCol === 'price' && !sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-down" class="text-white">
+              </iconify-icon>
+            </template>
+            <template x-if="sortCol === 'price' && sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-up" class="text-white">
+              </iconify-icon>
+            </template>
+          </div>
+        </th>
+        <th @click="sort('uom')" class="cursor-pointer">
+          <div class="flex flex-row items-center gap-1">
+            UOM
+            <template x-if="sortCol === 'uom' && !sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-down" class="text-white">
+              </iconify-icon>
+            </template>
+            <template x-if="sortCol === 'uom' && sortAsc">
+              <iconify-icon width="16" icon="mdi:arrow-up" class="text-white">
+              </iconify-icon>
+            </template>
+          </div>
+        </th>
         <th>Actions</th>
       </tr>
     </thead>
 
     <tbody>
-      <% @products.each do |product| %>
+      <template x-if="!data.length">
         <tr class="hover">
-          <td><%= product.brand.name %></td>
-          <td><%= product.name %></td>
-          <td><%= product.color %></td>
-          <td><%= product.size %></td>
-          <td><%= product.type %></td>
-          <td><%= number_to_currency(product.price, unit: "₱") %></td>
-          <td><%= product.uom %></td>
-          <td><%= link_to "View", product, class: "btn btn-primary" %></td>
+          <td colspan="8" class="text-center">
+            <i>Loading...</i>
+          </td>
         </tr>
-      <% end %>
+      </template>
+      <template x-for="product in data" :key="product._id">
+        <tr class="hover">
+          <td x-text="product.brand_name"></td>
+          <td x-text="product.name"></td>
+          <td x-text="product.color"></td>
+          <td x-text="product.size"></td>
+          <td x-text="product.type"></td>
+          <td x-text="NumberToCurrency.format(product.price)"></td>
+          <td x-text="product.uom"></td>
+          <td>
+            <a :href="`/products/${product._id}`" class="btn btn-primary">View</a>
+          </td>
+        </tr>
+      </template>
     </tbody>
   </table>
 </div>
+
+<% content_for :page_script do %>
+  <script>
+    document.addEventListener("alpine:init", () => {
+       Alpine.data('products', () => ({
+        data: [],
+        sortCol: null,
+        sorAsc: true,
+        async init() {
+          let resp = await fetch('/products.json');
+          this.data = await resp.json();
+        },
+        sort(col) {
+          if (this.sortCol === col) this.sortAsc = !this.sortAsc;
+          this.sortCol = col;
+          this.data.sort((a, b) => {
+            if (a[this.sortCol] < b[this.sortCol]) return this.sortAsc ? 1 : -1;
+            if (a[this.sortCol] > b[this.sortCol]) return this.sortAsc ? -1 : 1;
+            return 0;
+          });
+        }
+      }))
+    });
+  </script>
+<% end %>

@@ -71,3 +71,6 @@ vendor
 stats.html
 
 /config/credentials/production.key
+!/lib/data
+!/lib/data/.keep
+/lib/data/*.csv

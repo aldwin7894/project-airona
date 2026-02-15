@@ -101,6 +101,11 @@ window.addEventListener("load", () => {
 
 Chart.register(PieController, ArcElement, Tooltip);
 
+const NumberToCurrency = new Intl.NumberFormat("en-PH", {
+  style: "currency",
+  currency: "PHP",
+});
+
 Object.assign(globalThis, {
   Alpine,
   Chart,
@@ -108,6 +113,7 @@ Object.assign(globalThis, {
   Navigation,
   fadeIn,
   fadeOut,
+  NumberToCurrency,
 });
 Alpine.start();
 themeChange();

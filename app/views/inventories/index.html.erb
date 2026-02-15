@@ -24,7 +24,7 @@
     <tbody>
       <% @inventories.each do |inventory| %>
         <tr class="hover">
-          <td><%= inventory.inventory_type %></td>
+          <td><%= inventory.inventory_type.titleize %></td>
           <td><%= inventory.product.brand.name %></td>
           <td><%= inventory.product.name %></td>
           <td><%= inventory.quantity %></td>

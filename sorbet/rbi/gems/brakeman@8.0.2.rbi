@@ -232,7 +232,7 @@ class Brakeman::Logger::Base
   # Called on exit
   #
   # source://brakeman//lib/brakeman/logger.rb#60
-  def cleanup(newline); end
+  def cleanup(newline = T.unsafe(nil)); end
 
   # Use ANSI codes to color a string
   #
@@ -296,22 +296,22 @@ class Brakeman::Logger::Console < ::Brakeman::Logger::Base
   # source://brakeman//lib/brakeman/logger.rb#156
   def initialize(options, *_arg1); end
 
-  # source://brakeman//lib/brakeman/logger.rb#180
+  # source://brakeman//lib/brakeman/logger.rb#181
   def alert(message); end
 
-  # source://brakeman//lib/brakeman/logger.rb#174
+  # source://brakeman//lib/brakeman/logger.rb#175
   def announce(message); end
 
-  # source://brakeman//lib/brakeman/logger.rb#258
+  # source://brakeman//lib/brakeman/logger.rb#259
   def cleanup(newline = T.unsafe(nil)); end
 
-  # source://brakeman//lib/brakeman/logger.rb#245
+  # source://brakeman//lib/brakeman/logger.rb#246
   def clear_line; end
 
-  # source://brakeman//lib/brakeman/logger.rb#239
+  # source://brakeman//lib/brakeman/logger.rb#240
   def clear_prefix; end
 
-  # source://brakeman//lib/brakeman/logger.rb#186
+  # source://brakeman//lib/brakeman/logger.rb#187
   def context(description, &_arg1); end
 
   # Returns the value of attribute prefix.
@@ -321,25 +321,25 @@ class Brakeman::Logger::Console < ::Brakeman::Logger::Base
 
   # If an alert was written, redo prefix on next line
   #
-  # source://brakeman//lib/brakeman/logger.rb#223
+  # source://brakeman//lib/brakeman/logger.rb#224
   def rewrite_prefix; end
 
-  # source://brakeman//lib/brakeman/logger.rb#234
+  # source://brakeman//lib/brakeman/logger.rb#235
   def set_prefix(message); end
 
-  # source://brakeman//lib/brakeman/logger.rb#250
+  # source://brakeman//lib/brakeman/logger.rb#251
   def spin; end
 
-  # source://brakeman//lib/brakeman/logger.rb#194
+  # source://brakeman//lib/brakeman/logger.rb#195
   def time_step(description, &_arg1); end
 
-  # source://brakeman//lib/brakeman/logger.rb#207
+  # source://brakeman//lib/brakeman/logger.rb#208
   def update_progress(current, total, type = T.unsafe(nil)); end
 
-  # source://brakeman//lib/brakeman/logger.rb#228
+  # source://brakeman//lib/brakeman/logger.rb#229
   def write_after(message); end
 
-  # source://brakeman//lib/brakeman/logger.rb#217
+  # source://brakeman//lib/brakeman/logger.rb#218
   def write_prefix(pref); end
 end
 

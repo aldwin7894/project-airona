@@ -10,5 +10,5 @@ class Inventory
   field :selling_price, type: Float
   field :inventory_type, type: String
 
-  validates :quantity, comparison: { greater_than: 0 }
+  validates :quantity, comparison: { greater_than_or_equal_to: 0 }
 end

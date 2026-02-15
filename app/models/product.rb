@@ -30,9 +30,9 @@ class Product
   end
 
   private
-    def create_inventory
+    def create_inventory(quantity: 0)
       return if Inventory.exists?(product: self)
 
-      Inventory.create(product: self, quantity: 0, selling_price: self.price)
+      Inventory.create(product: self, quantity:, selling_price: self.price)
     end
 end
