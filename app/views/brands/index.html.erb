@@ -4,26 +4,112 @@
 
 <h1 class="text-4xl font-bold">Brands</h1>
 
-<div class="w-full flex flex-row justify-end gap-2">
-  <%= link_to "New brand", new_brand_path, class: "btn btn-primary" %>
-</div>
+<div class="flex flex-col gap-2" x-data="brands">
+  <div class="w-full flex flex-row justify-between gap-2">
+    <label class="input input-bordered flex items-center gap-2">
+      <input @input.debounce="search($event.target.value)" type="text" class="grow" placeholder="Search"/>
+      <iconify-icon icon="mdi:magnify" width="20"></iconify-icon>
+    </label>
+    <%= link_to "New brand", new_brand_path, class: "btn btn-primary" %>
+  </div>
 
-<div class="overflow-x-auto rounded-box border-2 border-base-content/5 bg-base-100">
-  <table class="table table-zebra table-lg" id="brands">
-    <thead>
-      <tr class="bg-base-300 text-base-content">
-        <th>Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @brands.each do |brand| %>
-        <tr class="hover">
-          <td><%= brand.name %></td>
-          <td><%= link_to "View", brand, class: "btn btn-primary" %></td>
+  <div class="overflow-x-auto rounded-box border-2 border-base-content/5 bg-base-100">
+    <table class="table table-zebra table-lg" id="brands">
+      <thead>
+        <tr class="bg-base-300 text-base-content">
+          <template x-for="column in columns" :key="column.name">
+            <th @click="sort(column.name)" class="cursor-pointer">
+              <div class="flex flex-row items-center gap-1">
+                <span x-text="column.label"></span>
+                <template x-if="sortCol === column.name && !sortAsc">
+                  <iconify-icon width="16" icon="mdi:arrow-down" class="text-white">
+                  </iconify-icon>
+                </template>
+                <template x-if="sortCol === column.name && sortAsc">
+                  <iconify-icon width="16" icon="mdi:arrow-up" class="text-white">
+                  </iconify-icon>
+                </template>
+              </div>
+            </th>
+          </template>
+          <th>Actions</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <template x-if="isLoading">
+          <tr class="hover">
+            <td colspan="8" class="text-center">
+              <i>Loading...</i>
+            </td>
+          </tr>
+        </template>
+        <template x-if="!data.length && !isLoading">
+          <tr class="hover">
+            <td colspan="8" class="text-center">
+              <i>No data found.</i>
+            </td>
+          </tr>
+        </template>
+        <template x-for="brand in data" :key="brand._id">
+          <tr class="hover">
+            <td x-text="brand.name"></td>
+            <td>
+              <a :href="`/brands/${brand._id}`" class="btn btn-primary">View</a>
+            </td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </div>
 </div>
+
+<% content_for :page_script do %>
+  <script>
+    document.addEventListener("alpine:init", () => {
+       Alpine.data('brands', () => ({
+        originalData: [],
+        data: [],
+        sortCol: null,
+        sortAsc: null,
+        isLoading: true,
+        columns: [
+          { name: "name", label: "Name" },
+        ],
+        async init() {
+          let resp = await fetch('/brands.json');
+          this.originalData = await resp.json();
+          this.data = [...this.originalData];
+          this.isLoading = false;
+        },
+        sort (col) {
+          this.sortCol = col;
+          if (this.sortCol === col && this.sortAsc === false) {
+            this.sortCol = null;
+            this.sortAsc = null;
+            this.data = [...this.originalData];
+            return;
+          }
+
+          if (this.sortCol === col) this.sortAsc = this.sortAsc === null ? true : !this.sortAsc;
+          this.data.sort((a, b) => {
+            if (a[this.sortCol] < b[this.sortCol]) return this.sortAsc ? 1 : -1;
+            if (a[this.sortCol] > b[this.sortCol]) return this.sortAsc ? -1 : 1;
+            return 0;
+          });
+        },
+        search (query) {
+          if (!query.trim()) {
+            this.data = [...this.originalData];
+            return;
+          }
+
+          query = query.toLowerCase();
+          this.data = [...this.originalData].filter(p => {
+            return Object.values(p).some(v => String(v).toLowerCase().includes(query));
+          });
+        }
+      }))
+    });
+  </script>
+<% end %>

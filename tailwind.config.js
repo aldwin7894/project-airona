@@ -1,7 +1,6 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 import typographyPlugin from "@tailwindcss/typography";
-import formsPlugin from "@tailwindcss/forms";
 import aspectRatioPlugin from "@tailwindcss/aspect-ratio";
 import animatecssPlugin from "tailwindcss-animatecss";
 import daisyuiPlugin from "daisyui";
@@ -63,7 +62,6 @@ export default {
   },
   plugins: [
     typographyPlugin,
-    formsPlugin,
     aspectRatioPlugin,
     animatecssPlugin,
     plugin(({ matchUtilities, theme }) => {

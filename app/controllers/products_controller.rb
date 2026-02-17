@@ -9,38 +9,43 @@ class ProductsController < ApplicationController
   respond_to :html, :json
 
   def index
-    @products = Product.collection.aggregate([
-      {
-        "$lookup": {
-          "from": "brands",
-          "localField": "brand_id",
-          "foreignField": "_id",
-          "as": "brand"
-        }
-      },
-      {
-        "$unwind": "$brand"
-      },
-      {
-        "$sort": {
-          "brand.name": 1,
-          "name": 1
-        }
-      },
-      {
-        "$addFields": {
-          "brand_name": "$brand.name"
-        }
-      },
-      {
-        "$replaceRoot": {
-          "newRoot": "$$ROOT"
-        }
-      }
-    ]).map do |doc|
-      Product.instantiate(doc)
+    respond_to do |format|
+      format.html
+      format.json do
+        @products = Product.collection.aggregate([
+          {
+            "$lookup": {
+              "from": "brands",
+              "localField": "brand_id",
+              "foreignField": "_id",
+              "as": "brand"
+            }
+          },
+          {
+            "$unwind": "$brand"
+          },
+          {
+            "$sort": {
+              "brand.name": 1,
+              "name": 1
+            }
+          },
+          {
+            "$addFields": {
+              "brand_name": "$brand.name"
+            }
+          },
+          {
+            "$replaceRoot": {
+              "newRoot": "$$ROOT"
+            }
+          }
+        ]).map do |doc|
+          Product.instantiate(doc)
+        end
+        respond_with(@products)
+      end
     end
-    respond_with(@products)
   end
 
   def show

@@ -5,11 +5,24 @@ class SuppliersController < ApplicationController
   layout :custom_layout
   before_action :set_supplier, only: [ :show, :edit, :update, :destroy ]
 
-  respond_to :html
+  respond_to :html, :json
 
   def index
-    @suppliers = Supplier.all
-    respond_with(@suppliers)
+    respond_to do |format|
+      format.html
+      format.json do
+        @suppliers = Supplier.collection.aggregate([
+          {
+            "$sort": {
+              "name": 1
+            }
+          },
+        ]).map do |doc|
+          Supplier.instantiate(doc)
+        end
+        respond_with(@suppliers)
+      end
+    end
   end
 
   def show

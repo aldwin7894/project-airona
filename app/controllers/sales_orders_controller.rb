@@ -4,7 +4,7 @@
 class SalesOrdersController < ApplicationController
   before_action :set_sales_order, only: [ :show, :edit, :update, :destroy ]
 
-  respond_to :html
+  respond_to :html, :json
 
   def index
     @sales_orders = SalesOrder.all

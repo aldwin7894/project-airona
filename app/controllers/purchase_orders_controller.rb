@@ -5,7 +5,7 @@ class PurchaseOrdersController < ApplicationController
   before_action :set_purchase_order, only: [ :show, :edit, :update, :destroy ]
   before_action :set_lookups, only: [ :new, :edit, :create, :update ]
 
-  respond_to :html
+  respond_to :html, :json
 
   def index
     @purchase_orders = PurchaseOrder.includes(:supplier).all

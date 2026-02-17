@@ -4,11 +4,24 @@
 class BrandsController < ApplicationController
   before_action :set_brand, only: [ :show, :edit, :update, :destroy ]
 
-  respond_to :html
+  respond_to :html, :json
 
   def index
-    @brands = Brand.all
-    respond_with(@brands)
+    respond_to do |format|
+      format.html
+      format.json do
+        @brands = Brand.collection.aggregate([
+          {
+            "$sort": {
+              "name": 1
+            }
+          },
+        ]).map do |doc|
+          Brand.instantiate(doc)
+        end
+        respond_with(@brands)
+      end
+    end
   end
 
   def show
