@@ -315,7 +315,7 @@ GEM
     ruby-progressbar (1.13.0)
     rubyzip (3.2.2)
     securerandom (0.4.1)
-    selenium-webdriver (4.40.0)
+    selenium-webdriver (4.41.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
@@ -538,7 +538,7 @@ CHECKSUMS
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   rubyzip (3.2.2) sha256=c0ed99385f0625415c8f05bcae33fe649ed2952894a95ff8b08f26ca57ea5b3c
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
-  selenium-webdriver (4.40.0) sha256=16ef7aa9853c1d4b9d52eac45aafa916e3934c5c83cb4facb03f250adfd15e5b
+  selenium-webdriver (4.41.0) sha256=cdc1173cd55cf186022cea83156cc2d0bec06d337e039b02ad25d94e41bedd22
   sorbet (0.6.12949) sha256=1bca04c09dba5b65017a5a723cfb02088c79e826a40cd4ec424aeebf11dbc008
   sorbet-runtime (0.6.12949) sha256=81af199a75dd6d9de7862c4261f528dc08287cda3218316172c0b2606c74c901
   sorbet-static (0.6.12949-x86_64-linux) sha256=aae9bd2713797709af644ba2a06a4ed4193df295eb26a0604a0ec4c39e0764cb
