@@ -5,33 +5,33 @@
 # Please instead update this file by running `bin/tapioca gem bundler-audit`.
 
 
-# source://bundler-audit//lib/bundler/audit/advisory.rb#22
+# pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:22
 module Bundler::Audit; end
 
 # Represents an advisory loaded from the {Database}.
 #
-# source://bundler-audit//lib/bundler/audit/advisory.rb#38
+# pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:38
 class Bundler::Audit::Advisory < ::Struct
   # Compares two advisories.
   #
   # @param other [Advisory]
   # @return [Boolean]
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#210
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:210
   def ==(other); end
 
   # Determines how critical the vulnerability is.
   #
   # @return [:none, :low, :medium, :high, :critical, nil] The criticality of the vulnerability based on the CVSS score.
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#138
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:138
   def criticality; end
 
   # The CVE identifier.
   #
   # @return [String, nil]
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#93
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:93
   def cve_id; end
 
   # The GHSA (GitHub Security Advisory) identifier
@@ -39,7 +39,7 @@ class Bundler::Audit::Advisory < ::Struct
   # @return [String, nil]
   # @since 0.7.0
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#113
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:113
   def ghsa_id; end
 
   # Return a compacted list of all ids
@@ -47,14 +47,14 @@ class Bundler::Audit::Advisory < ::Struct
   # @return [Array<String>]
   # @since 0.7.0
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#124
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:124
   def identifiers; end
 
   # The OSVDB identifier.
   #
   # @return [String, nil]
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#102
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:102
   def osvdb_id; end
 
   # Checks whether the version is patched against the advisory.
@@ -63,21 +63,21 @@ class Bundler::Audit::Advisory < ::Struct
   # @return [Boolean] Specifies whether the version is patched against the advisory.
   # @since 0.2.0
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#184
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:184
   def patched?(version); end
 
   # Converts the advisory to a Hash.
   #
   # @return [Hash{Symbol => Object}]
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#219
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:219
   def to_h; end
 
   # Returns the value of attribute id
   #
   # @return [Object] the current value of id
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#225
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:225
   def to_s; end
 
   # Checks whether the version is not affected by the advisory.
@@ -86,7 +86,7 @@ class Bundler::Audit::Advisory < ::Struct
   # @return [Boolean] Specifies whether the version is not affected by the advisory.
   # @since 0.2.0
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#167
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:167
   def unaffected?(version); end
 
   # Checks whether the version is vulnerable to the advisory.
@@ -94,7 +94,7 @@ class Bundler::Audit::Advisory < ::Struct
   # @param version [Gem::Version] The version to compare against {#patched_versions}.
   # @return [Boolean] Specifies whether the version is vulnerable to the advisory or not.
   #
-  # source://bundler-audit//lib/bundler/audit/advisory.rb#199
+  # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:199
   def vulnerable?(version); end
 
   class << self
@@ -104,7 +104,7 @@ class Bundler::Audit::Advisory < ::Struct
     # @param path [String] The path to the advisory YAML file.
     # @return [Advisory]
     #
-    # source://bundler-audit//lib/bundler/audit/advisory.rb#50
+    # pkg:gem/bundler-audit#lib/bundler/audit/advisory.rb:50
     def load(path); end
   end
 end
@@ -112,7 +112,7 @@ end
 # Represents the directory of advisories, grouped by gem name
 # and CVE number.
 #
-# source://bundler-audit//lib/bundler/audit/database.rb#29
+# pkg:gem/bundler-audit#lib/bundler/audit/database.rb:29
 class Bundler::Audit::Database
   # Initializes the Advisory Database.
   #
@@ -120,7 +120,7 @@ class Bundler::Audit::Database
   # @raise [ArgumentError] The path was not a directory.
   # @return [Database] a new instance of Database
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#62
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:62
   def initialize(path = T.unsafe(nil)); end
 
   # Enumerates over every advisory in the database.
@@ -129,7 +129,7 @@ class Bundler::Audit::Database
   # @yield [advisory] If a block is given, it will be passed each advisory.
   # @yieldparam advisory [Advisory] An advisory from the database.
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#265
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:265
   def advisories(&block); end
 
   # Enumerates over advisories for the given gem.
@@ -139,7 +139,7 @@ class Bundler::Audit::Database
   # @yield [advisory] If a block is given, each advisory for the given gem will be yielded.
   # @yieldparam advisory [Advisory] An advisory for the given gem.
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#288
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:288
   def advisories_for(name); end
 
   # Verifies whether the gem is effected by any advisories.
@@ -150,7 +150,7 @@ class Bundler::Audit::Database
   #   the gem.
   # @yieldparam advisory [Advisory] An advisory that effects the specific version of the gem.
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#312
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:312
   def check_gem(gem); end
 
   # The last commit ID of the repository.
@@ -158,7 +158,7 @@ class Bundler::Audit::Database
   # @return [String, nil] The commit hash or `nil` if the database is not a git repository.
   # @since 0.9.0
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#228
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:228
   def commit_id; end
 
   # Determines if the database is a git repository.
@@ -166,14 +166,14 @@ class Bundler::Audit::Database
   # @return [Boolean]
   # @since 0.8.0
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#180
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:180
   def git?; end
 
   # Inspects the database.
   #
   # @return [String] The inspected database.
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#348
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:348
   def inspect; end
 
   # Determines the time when the database was last updated.
@@ -181,28 +181,28 @@ class Bundler::Audit::Database
   # @return [Time]
   # @since 0.8.0
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#243
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:243
   def last_updated_at; end
 
   # The path to the advisory database.
   #
   # @return [String]
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#51
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:51
   def path; end
 
   # The number of advisories within the database.
   #
   # @return [Integer] The number of advisories.
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#328
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:328
   def size; end
 
   # Converts the database to a String.
   #
   # @return [String] The path to the database.
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#338
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:338
   def to_s; end
 
   # Updates the ruby-advisory-db.
@@ -216,7 +216,7 @@ class Bundler::Audit::Database
   #   command is not installed.
   # @since 0.8.0
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#204
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:204
   def update!(options = T.unsafe(nil)); end
 
   protected
@@ -226,7 +226,7 @@ class Bundler::Audit::Database
   # @yield [path] The given block will be passed each advisory path.
   # @yieldparam path [String] A path to an advisory `.yml` file.
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#363
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:363
   def each_advisory_path(&block); end
 
   # Enumerates over the advisories for the given gem.
@@ -235,7 +235,7 @@ class Bundler::Audit::Database
   # @yield [path] The given block will be passed each advisory path.
   # @yieldparam path [String] A path to an advisory `.yml` file.
   #
-  # source://bundler-audit//lib/bundler/audit/database.rb#379
+  # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:379
   def each_advisory_path_for(name, &block); end
 
   class << self
@@ -249,7 +249,7 @@ class Bundler::Audit::Database
     # @return [Database] The newly downloaded database.
     # @since 0.8.0
     #
-    # source://bundler-audit//lib/bundler/audit/database.rb#117
+    # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:117
     def download(options = T.unsafe(nil)); end
 
     # Tests whether the database exists.
@@ -258,14 +258,14 @@ class Bundler::Audit::Database
     # @return [Boolean]
     # @since 0.8.0
     #
-    # source://bundler-audit//lib/bundler/audit/database.rb#90
+    # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:90
     def exists?(path = T.unsafe(nil)); end
 
     # The default path for the database.
     #
     # @return [String] The path to the database directory.
     #
-    # source://bundler-audit//lib/bundler/audit/database.rb#76
+    # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:76
     def path; end
 
     # Updates the ruby-advisory-db.
@@ -278,7 +278,7 @@ class Bundler::Audit::Database
     # @return [Boolean] Specifies whether the update was successful.
     # @since 0.3.0
     #
-    # source://bundler-audit//lib/bundler/audit/database.rb#157
+    # pkg:gem/bundler-audit#lib/bundler/audit/database.rb:157
     def update!(options = T.unsafe(nil)); end
   end
 end
@@ -287,28 +287,28 @@ end
 #
 # @since 0.8.0
 #
-# source://bundler-audit//lib/bundler/audit/database.rb#46
+# pkg:gem/bundler-audit#lib/bundler/audit/database.rb:46
 Bundler::Audit::Database::DEFAULT_PATH = T.let(T.unsafe(nil), String)
 
-# source://bundler-audit//lib/bundler/audit/database.rb#31
+# pkg:gem/bundler-audit#lib/bundler/audit/database.rb:31
 class Bundler::Audit::Database::DownloadFailed < ::RuntimeError; end
 
 # Git URL of the ruby-advisory-db.
 #
-# source://bundler-audit//lib/bundler/audit/database.rb#38
+# pkg:gem/bundler-audit#lib/bundler/audit/database.rb:38
 Bundler::Audit::Database::URL = T.let(T.unsafe(nil), String)
 
 # Path to the user's copy of the ruby-advisory-db.
 #
-# source://bundler-audit//lib/bundler/audit/database.rb#41
+# pkg:gem/bundler-audit#lib/bundler/audit/database.rb:41
 Bundler::Audit::Database::USER_PATH = T.let(T.unsafe(nil), String)
 
-# source://bundler-audit//lib/bundler/audit/database.rb#34
+# pkg:gem/bundler-audit#lib/bundler/audit/database.rb:34
 class Bundler::Audit::Database::UpdateFailed < ::RuntimeError; end
 
 # bundler-audit version
 #
-# source://bundler-audit//lib/bundler/audit/version.rb#21
+# pkg:gem/bundler-audit#lib/bundler/audit/version.rb:21
 Bundler::Audit::VERSION = T.let(T.unsafe(nil), String)
 
 module Bundler::MatchRemoteMetadata

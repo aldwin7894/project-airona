@@ -1,7 +1,7 @@
-FROM ruby:4.0.1-slim-trixie AS build-env
+FROM ruby:4.0.2-slim-trixie AS build-env
 
 ENV BUNDLE_PATH=/gems
-ENV NODE_VERSION=24.13.0
+ENV NODE_VERSION=24.14.0
 
 RUN apt-get update && apt-get install -yq --no-install-recommends \
   build-essential \
@@ -54,7 +54,7 @@ RUN --mount=type=secret,id=TZ \
   && bash ./build.sh
 
 #==============================================
-FROM ruby:4.0.1-slim-trixie
+FROM ruby:4.0.2-slim-trixie
 
 ENV BUNDLE_PATH=/gems
 
