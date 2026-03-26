@@ -1121,10 +1121,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actioncable@npm:^8.1.200":
-  version: 8.1.200
-  resolution: "@rails/actioncable@npm:8.1.200"
-  checksum: 10/f7153a95511d56f4aa6efd7b10000b5da9ed00a7acb2e7998592ceefd2370e6db660013d21a65f4653b0779c73619c9c6e1d6fb7775737b483533b1cf6a708f9
+"@rails/actioncable@npm:^8.1.201":
+  version: 8.1.201
+  resolution: "@rails/actioncable@npm:8.1.201"
+  checksum: 10/42097865652387f7e79d98d7a07a833d3324086e4f9032b5e72684dab16881a83bef0eec608e7d41747f0a2564c636fdd1561a4e97e3fa75316337e5ccc7d296
   languageName: node
   linkType: hard
 
@@ -5272,7 +5272,7 @@ __metadata:
     "@eslint/eslintrc": "npm:^3.3.5"
     "@eslint/js": "npm:^10.0.1"
     "@hotwired/stimulus": "npm:^3.2.2"
-    "@rails/actioncable": "npm:^8.1.200"
+    "@rails/actioncable": "npm:^8.1.201"
     "@stimulus-components/rails-nested-form": "npm:^5.0.0"
     "@tailwindcss/aspect-ratio": "npm:^0.4.2"
     "@tailwindcss/typography": "npm:^0.5.19"

@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
-    "@rails/actioncable": "^8.1.200",
+    "@rails/actioncable": "^8.1.201",
     "@stimulus-components/rails-nested-form": "^5.0.0",
     "alpinejs": "^3.15.8",
     "chart.js": "^4.5.1",
