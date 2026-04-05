@@ -44,8 +44,7 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: |
-          mkdir -p .yarn/cache
-          yarn install --immutable --immutable-cache --check-cache
+          yarn install --immutable
 
       - name: Run security audit
         run: yarn audit --level=moderate
