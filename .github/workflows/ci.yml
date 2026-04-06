@@ -31,16 +31,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
+      - name: Install and Enable Corepack
+        run: |
+          npm install --ignore-scripts -g corepack@latest
+          corepack enable
+        shell: bash
+
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: 'package.json'
           cache: 'yarn'
       - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: |
+          YARN_ENABLE_SCRIPTS=false yarn install --immutable
 
       - name: Run security audit
-        run: yarn audit --level=moderate
+        run: yarn npm audit --severity=moderate
         env:
           CI: true
 
