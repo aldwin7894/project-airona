@@ -8,7 +8,7 @@ gem "rails", "~> 8.1.3"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # use vite to build javascripts and assets
-gem "vite_rails", "~> 3.10"
+gem "vite_rails", "~> 3.11"
 # Use mongodb
 gem "mongoid", "~> 9.0.11"
 gem "bson", "~> 5.2"
