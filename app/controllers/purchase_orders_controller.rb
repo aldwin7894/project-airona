@@ -43,7 +43,7 @@ class PurchaseOrdersController < ApplicationController
 
   private
     def set_purchase_order
-      @purchase_order = PurchaseOrder.find(params[:id])
+      @purchase_order = PurchaseOrder.find(params.expect(:id))
     end
 
     def set_lookups

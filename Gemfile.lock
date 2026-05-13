@@ -313,22 +313,22 @@ GEM
     ruby-lsp-rails (0.4.8)
       ruby-lsp (>= 0.26.0, < 0.27.0)
     ruby-progressbar (1.13.0)
-    rubydex (0.2.2-x86_64-linux)
+    rubydex (0.2.3-x86_64-linux)
     rubyzip (3.3.0)
     securerandom (0.4.1)
-    selenium-webdriver (4.43.0)
+    selenium-webdriver (4.44.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
-    sorbet (0.6.13208)
-      sorbet-static (= 0.6.13208)
-    sorbet-runtime (0.6.13208)
-    sorbet-static (0.6.13208-x86_64-linux)
-    sorbet-static-and-runtime (0.6.13208)
-      sorbet (= 0.6.13208)
-      sorbet-runtime (= 0.6.13208)
+    sorbet (0.6.13219)
+      sorbet-static (= 0.6.13219)
+    sorbet-runtime (0.6.13219)
+    sorbet-static (0.6.13219-x86_64-linux)
+    sorbet-static-and-runtime (0.6.13219)
+      sorbet (= 0.6.13219)
+      sorbet-runtime (= 0.6.13219)
     spoom (1.7.14)
       erubi (>= 1.10.0)
       prism (>= 0.28.0)
@@ -533,14 +533,14 @@ CHECKSUMS
   ruby-lsp (0.26.9) sha256=33a01c001c00a76b4e821efc04ed7572983430f31ca5d6f3e343d0b6ccab4129
   ruby-lsp-rails (0.4.8) sha256=f09d1f926d4063deeb2f3049311925c20dfe6c912371e3bcd04a265a865c44ae
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
-  rubydex (0.2.2-x86_64-linux) sha256=b356fbd11401522dc6967637b3c0485827053e549303229eeb8aa669638b0885
+  rubydex (0.2.3-x86_64-linux) sha256=796a54c1af9f8868c87bf92fee5f9ccc39ffd40eb8386e0875058a18beb76b09
   rubyzip (3.3.0) sha256=a372fc67892a4f8c0bc8ec906b720353d8e48807a64b2e63adf99b1e3583a034
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
-  selenium-webdriver (4.43.0) sha256=a634377b964b701c6ac0a009ce3a08fa34ec1e1e7fe9a6d57e3088d14529a65c
-  sorbet (0.6.13208) sha256=040b8de0b8746a2c7a0cabaab6f38b8508c215f344372bf818245986a9ee7240
-  sorbet-runtime (0.6.13208) sha256=2ae9a6e52bbfdd39916448b09bfb165357190effb28fd8c554c5dd2c52be0a32
-  sorbet-static (0.6.13208-x86_64-linux) sha256=bc210d5256c877106c21643f8d5fa8c5b445d5e1a825c0b3b1d0030aed128b09
-  sorbet-static-and-runtime (0.6.13208) sha256=31aa780d04cc6abf39f062cd334bcd243ac8566107ca37440883cac82bae88b7
+  selenium-webdriver (4.44.0) sha256=6f1df072529af369589c46f0e01132952aabb250cfd683c274d74dc1eb5d8477
+  sorbet (0.6.13219) sha256=fa1a5d074dcd3346687fd0eef14c2c8dba73de432f6edfc728f23ecea9df9e85
+  sorbet-runtime (0.6.13219) sha256=f69633b36fc9c297837611c0191d863cab1857f2298899184526453d6d8863ea
+  sorbet-static (0.6.13219-x86_64-linux) sha256=b2dc026d1f0b7a5dbe5056a9ef6c058d1e5c6f9a79a48be709556631f89f91b9
+  sorbet-static-and-runtime (0.6.13219) sha256=0c1b7a92e02f792dc8c917957912fc588bb60066b1797d09806305eba8e84791
   spoom (1.7.14) sha256=48da4e39d9a63611aa0132a3656d7e75833fcccb6006d59f7fa879b98c8877c4
   stringio (3.2.0) sha256=c37cb2e58b4ffbd33fe5cd948c05934af997b36e0b6ca6fdf43afa234cf222e1
   syntax_tree (6.3.0) sha256=56e25a9692c798ec94c5442fe94c5e94af76bef91edc8bb02052cbdecf35f13d
@@ -563,7 +563,7 @@ CHECKSUMS
   zeitwerk (2.7.5) sha256=d8da92128c09ea6ec62c949011b00ed4a20242b255293dd66bf41545398f73dd
 
 RUBY VERSION
-  ruby 4.0.3
+  ruby 4.0.4
 
 BUNDLED WITH
   4.0.11

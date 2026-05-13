@@ -42,7 +42,7 @@ class SalesOrdersController < ApplicationController
 
   private
     def set_sales_order
-      @sales_order = SalesOrder.find(params[:id])
+      @sales_order = SalesOrder.find(params.expect(:id))
     end
 
     def sales_order_params
