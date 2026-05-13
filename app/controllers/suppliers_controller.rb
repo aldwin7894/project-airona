@@ -56,7 +56,7 @@ class SuppliersController < ApplicationController
 
   private
     def set_supplier
-      @supplier = Supplier.find(params[:id])
+      @supplier = Supplier.find(params.expect(:id))
     end
 
     def supplier_params

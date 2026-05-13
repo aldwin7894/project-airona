@@ -93,7 +93,7 @@ class InventoriesController < ApplicationController
 
   private
     def set_inventory
-      @inventory = Inventory.find(params[:id])
+      @inventory = Inventory.find(params.expect(:id))
     end
 
     def set_lookups

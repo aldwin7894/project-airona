@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "4.0.3"
+ruby "4.0.4"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.3"
@@ -10,7 +10,7 @@ gem "puma", ">= 5.0"
 # use vite to build javascripts and assets
 gem "vite_rails", "~> 3.11"
 # Use mongodb
-gem "mongoid", "~> 9.0.11"
+gem "mongoid", "~> 9.1.0"
 gem "bson", "~> 5.2"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 5.4"
