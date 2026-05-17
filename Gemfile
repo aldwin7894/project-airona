@@ -36,7 +36,7 @@ gem "bootsnap", require: false
 
 gem "ostruct", "~> 0.6.2", require: false
 gem "rack-cors", "~> 3.0", require: "rack/cors"
-gem "jwt", "~> 3.1"
+gem "jwt", "~> 3.2"
 gem "httparty", "~> 0.24.2"
 
 group :development, :test do
