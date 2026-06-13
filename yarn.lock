@@ -5466,7 +5466,7 @@ __metadata:
     tailwindcss: "npm:^3.4.19"
     tailwindcss-animatecss: "npm:^3.0.5"
     terser: "npm:^5.48.0"
-    theme-change: "npm:^2.5.0"
+    theme-change: "npm:^3.0.2"
     tippy.js: "npm:^6.3.7"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.60.1"
@@ -6470,10 +6470,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"theme-change@npm:^2.5.0":
-  version: 2.5.0
-  resolution: "theme-change@npm:2.5.0"
-  checksum: 10/69481b6a1f460934790d357b0df70f316c75d6b36c7b460c8cb34085f368d20ee56abde80314967323cd0b431fb31c9c7f8de34d9b893e6ad7309ccfceed6b3a
+"theme-change@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "theme-change@npm:3.0.2"
+  checksum: 10/13c1f2e1cddb5677c9db4340767e88097d904e6a7d016c1e28425d44ecea6233319f8f859548fab6eba00199c883491f40d9dd0db1eba15dffc3ebe20360b589
   languageName: node
   linkType: hard
 
