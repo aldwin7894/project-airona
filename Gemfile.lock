@@ -322,13 +322,13 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
-    sorbet (0.6.13308)
-      sorbet-static (= 0.6.13308)
-    sorbet-runtime (0.6.13308)
-    sorbet-static (0.6.13308-x86_64-linux)
-    sorbet-static-and-runtime (0.6.13308)
-      sorbet (= 0.6.13308)
-      sorbet-runtime (= 0.6.13308)
+    sorbet (0.6.13310)
+      sorbet-static (= 0.6.13310)
+    sorbet-runtime (0.6.13310)
+    sorbet-static (0.6.13310-x86_64-linux)
+    sorbet-static-and-runtime (0.6.13310)
+      sorbet (= 0.6.13310)
+      sorbet-runtime (= 0.6.13310)
     spoom (1.7.16)
       erubi (>= 1.10.0)
       prism (>= 0.28.0)
@@ -537,10 +537,10 @@ CHECKSUMS
   rubyzip (3.3.1) sha256=2ed92112c7c43ba2b2527f35e6d99d9c2c99270b640aad5227516436481b1e4e
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   selenium-webdriver (4.44.0) sha256=6f1df072529af369589c46f0e01132952aabb250cfd683c274d74dc1eb5d8477
-  sorbet (0.6.13308) sha256=9cc91ea7fb6c90802a1f35567888e36b4b479f11c673caaa31e4a18b2af63ae6
-  sorbet-runtime (0.6.13308) sha256=71d772cc345bcf38fb7dce78397ebd6c061fd531aa71d222f379f34f8930fe7a
-  sorbet-static (0.6.13308-x86_64-linux) sha256=4e5491f999cc556a5fa71996fc5fd2be36172d2b45c57d3a9c7b69650e8cf2e4
-  sorbet-static-and-runtime (0.6.13308) sha256=a01f2c7817c0800858b59b3a07b3b63d29245e5a185d4790d7bab9f3f3faa39e
+  sorbet (0.6.13310) sha256=b6ee2dd48dd8c02c477ba28aa4b4dcf53ffc94c5d84b363664c1628f8b13bb4b
+  sorbet-runtime (0.6.13310) sha256=f4f6a6e3f31709065373b9cd34e830b040b53dccc42eb6dc43f99c2bb7948296
+  sorbet-static (0.6.13310-x86_64-linux) sha256=19f403d0c28273569188d97dfb9ea5ce750862fc68373b57d2ba660fe6c3be77
+  sorbet-static-and-runtime (0.6.13310) sha256=7e9bb2182fcfdcee98633392ced3192e077d6fa76d103b5504372c9b0949cbb8
   spoom (1.7.16) sha256=b6033d1aaede800ef37505474d260d57a02fa63364b4725ea40b6f606e932d59
   stringio (3.2.0) sha256=c37cb2e58b4ffbd33fe5cd948c05934af997b36e0b6ca6fdf43afa234cf222e1
   syntax_tree (6.3.0) sha256=56e25a9692c798ec94c5442fe94c5e94af76bef91edc8bb02052cbdecf35f13d
