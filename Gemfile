@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "4.0.5"
+ruby "4.0.6"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.3"
@@ -17,7 +17,7 @@ gem "redis", "~> 5.4"
 
 gem "devise", "~> 5.0"
 gem "dotenv", "~> 3.2.0"
-gem "lograge", "~> 0.14.0"
+gem "lograge", "~> 0.15.0"
 gem "logstash-event", "~> 1.2"
 gem "httplog", "~> 1.8"
 gem "responders", "~> 3.1"
