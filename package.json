@@ -33,7 +33,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.20",
     "@types/node": "^26.1.1",
-    "@typescript-eslint/parser": "^8.64.0",
+    "@typescript-eslint/parser": "^8.65.0",
     "autoprefixer": "^10.5.4",
     "cssnano": "^8.0.2",
     "cssnano-preset-advanced": "^8.0.2",
