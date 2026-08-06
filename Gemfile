@@ -13,7 +13,7 @@ gem "vite_rails", "~> 3.11"
 gem "mongoid", "~> 9.1.0"
 gem "bson", "~> 5.2"
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 5.4"
+gem "redis", "~> 6.0"
 
 gem "devise", "~> 5.0"
 gem "dotenv", "~> 3.2.0"
