@@ -20,7 +20,7 @@ gem "dotenv", "~> 3.2.0"
 gem "lograge", "~> 0.15.0"
 gem "logstash-event", "~> 1.2"
 gem "httplog", "~> 1.8"
-gem "responders", "~> 3.1"
+gem "responders", "~> 3.2"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
