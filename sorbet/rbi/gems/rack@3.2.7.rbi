@@ -146,7 +146,7 @@ class Rack::BodyProxy
   # Delegate missing methods to the wrapped body.
   #
   # pkg:gem/rack#lib/rack/body_proxy.rb:45
-  def method_missing(method_name, *args, **_arg2, &block); end
+  def method_missing(method_name, *args, **, &block); end
 
   private
 
@@ -310,7 +310,7 @@ class Rack::Builder
   # referenced in the application if required.
   #
   # pkg:gem/rack#lib/rack/builder.rb:159
-  def use(middleware, *args, **_arg2, &block); end
+  def use(middleware, *args, **, &block); end
 
   # Takes a lambda or block that is used to warm-up the application. This block is called
   # before the Rack application is returned by to_app.
@@ -1380,7 +1380,7 @@ class Rack::Lint::Wrapper
   def each; end
 
   # pkg:gem/rack#lib/rack/lint.rb:895
-  def respond_to?(name, *_arg1); end
+  def respond_to?(name, *); end
 
   # pkg:gem/rack#lib/rack/lint.rb:87
   def response; end
@@ -1473,28 +1473,28 @@ class Rack::Lint::Wrapper::StreamWrapper
   def initialize(stream); end
 
   # pkg:gem/rack#lib/rack/lint.rb:945
-  def <<(*_arg0, **_arg1, &_arg2); end
+  def <<(*, **, &); end
 
   # pkg:gem/rack#lib/rack/lint.rb:945
-  def close(*_arg0, **_arg1, &_arg2); end
+  def close(*, **, &); end
 
   # pkg:gem/rack#lib/rack/lint.rb:945
-  def close_read(*_arg0, **_arg1, &_arg2); end
+  def close_read(*, **, &); end
 
   # pkg:gem/rack#lib/rack/lint.rb:945
-  def close_write(*_arg0, **_arg1, &_arg2); end
+  def close_write(*, **, &); end
 
   # pkg:gem/rack#lib/rack/lint.rb:945
-  def closed?(*_arg0, **_arg1, &_arg2); end
+  def closed?(*, **, &); end
 
   # pkg:gem/rack#lib/rack/lint.rb:945
-  def flush(*_arg0, **_arg1, &_arg2); end
+  def flush(*, **, &); end
 
   # pkg:gem/rack#lib/rack/lint.rb:945
-  def read(*_arg0, **_arg1, &_arg2); end
+  def read(*, **, &); end
 
   # pkg:gem/rack#lib/rack/lint.rb:945
-  def write(*_arg0, **_arg1, &_arg2); end
+  def write(*, **, &); end
 end
 
 # The semantics of these +IO+ methods must be a best effort match to those of a normal Ruby +IO+ or +Socket+ object, using standard arguments and raising standard exceptions. Servers may simply pass on real +IO+ objects to the Streaming Body. In some cases (e.g. when using <tt>transfer-encoding</tt> or HTTP/2+), the server may need to provide a wrapper that implements the required methods, in order to provide the correct semantics.
@@ -1621,29 +1621,9 @@ module Rack::Mime
   def mime_type(ext, fallback = T.unsafe(nil)); end
 
   class << self
-    # Returns true if the given value is a mime match for the given mime match
-    # specification, false otherwise.
-    #
-    #    Rack::Mime.match?('text/html', 'text/*') => true
-    #    Rack::Mime.match?('text/plain', '*') => true
-    #    Rack::Mime.match?('text/html', 'application/json') => false
-    #
     # pkg:gem/rack#lib/rack/mime.rb:36
     def match?(value, matcher); end
 
-    # Returns String with mime type if found, otherwise use +fallback+.
-    # +ext+ should be filename extension in the '.ext' format that
-    #       File.extname(file) returns.
-    # +fallback+ may be any object
-    #
-    # Also see the documentation for MIME_TYPES
-    #
-    # Usage:
-    #     Rack::Mime.mime_type('.foo')
-    #
-    # This is a shortcut for:
-    #     Rack::Mime::MIME_TYPES.fetch('.foo', 'application/octet-stream')
-    #
     # pkg:gem/rack#lib/rack/mime.rb:21
     def mime_type(ext, fallback = T.unsafe(nil)); end
   end
@@ -1835,7 +1815,7 @@ class Rack::MockResponse::Cookie
   def expires; end
 
   # pkg:gem/rack#lib/rack/mock_response.rb:26
-  def method_missing(method_name, *args, **_arg2, &block); end
+  def method_missing(method_name, *args, **, &block); end
 
   # pkg:gem/rack#lib/rack/mock_response.rb:15
   def name; end
@@ -4563,7 +4543,7 @@ module Rack::Utils
 end
 
 # pkg:gem/rack#lib/rack/utils.rb:149
-Rack::Utils::ALLOWED_FORWARED_PARAMS = T.let(T.unsafe(nil), Hash)
+Rack::Utils::ALLOWED_FORWARDED_PARAMS = T.let(T.unsafe(nil), Hash)
 
 # pkg:gem/rack#lib/rack/utils.rb:25
 Rack::Utils::COMMON_SEP = T.let(T.unsafe(nil), Hash)

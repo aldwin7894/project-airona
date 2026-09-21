@@ -124,9 +124,11 @@
 # ====== Input Options
 #
 # Option +max_nesting+ (\Integer) specifies the maximum nesting depth allowed;
-# defaults to +100+; specify +false+ to disable depth checking.
+# defaults to +100+;
+# You can set it to +false+ to disable depth checking entirely, but that is dangerous
+# when parsing untrusted input.
 #
-# With the default, +false+:
+# With the default, +100+:
 #   source = '[0, [1, [2, [3]]]]'
 #   ruby = JSON.parse(source)
 #   ruby # => [0, [1, [2, [3]]]]
@@ -386,6 +388,15 @@
 # Too deep:
 #   # Raises JSON::NestingError (nesting of 2 is too deep):
 #   JSON.generate(obj, max_nesting: 2)
+#
+# With +false+:
+#   obj = []
+#   obj[0] = obj
+#   # Raises  SystemStackError: stack level too deep
+#   JSON.generate(obj, max_nesting: false)
+#
+# Setting +max_nesting+ to +false+ can lead to a stackoverflow and may leave the program
+# in an unrecoverable state. It is discouraged.
 #
 # ====== Escaping Options
 #
@@ -743,7 +754,7 @@ module JSON
   def fast_generate(obj, opts = T.unsafe(nil)); end
 
   # pkg:gem/json#lib/json/common.rb:986
-  def fast_unparse(*_arg0, **_arg1, &_arg2); end
+  def fast_unparse(*, **, &); end
 
   # :call-seq:
   #   JSON.generate(obj, opts = nil) -> new_string
@@ -1046,17 +1057,17 @@ module JSON
   def pretty_generate(obj, opts = T.unsafe(nil)); end
 
   # pkg:gem/json#lib/json/common.rb:996
-  def pretty_unparse(*_arg0, **_arg1, &_arg2); end
+  def pretty_unparse(*, **, &); end
 
   # pkg:gem/json#lib/json/common.rb:1006
-  def restore(*_arg0, **_arg1, &_arg2); end
+  def restore(*, **, &); end
 
   # :stopdoc:
   # All these were meant to be deprecated circa 2009, but were just set as undocumented
   # so usage still exist in the wild.
   #
   # pkg:gem/json#lib/json/common.rb:976
-  def unparse(*_arg0, **_arg1, &_arg2); end
+  def unparse(*, **, &); end
 
   # :call-seq:
   #   JSON.unsafe_load(source, options = {}) -> object
@@ -1288,7 +1299,7 @@ module JSON
     def fast_generate(obj, opts = T.unsafe(nil)); end
 
     # pkg:gem/json#lib/json/common.rb:986
-    def fast_unparse(*_arg0, **_arg1, &_arg2); end
+    def fast_unparse(*, **, &); end
 
     # :call-seq:
     #   JSON.generate(obj, opts = nil) -> new_string
@@ -1617,10 +1628,10 @@ module JSON
     def pretty_generate(obj, opts = T.unsafe(nil)); end
 
     # pkg:gem/json#lib/json/common.rb:996
-    def pretty_unparse(*_arg0, **_arg1, &_arg2); end
+    def pretty_unparse(*, **, &); end
 
     # pkg:gem/json#lib/json/common.rb:1006
-    def restore(*_arg0, **_arg1, &_arg2); end
+    def restore(*, **, &); end
 
     # Sets or Returns the JSON generator state class that is used by JSON.
     #
@@ -1637,7 +1648,7 @@ module JSON
     # so usage still exist in the wild.
     #
     # pkg:gem/json#lib/json/common.rb:976
-    def unparse(*_arg0, **_arg1, &_arg2); end
+    def unparse(*, **, &); end
 
     # :call-seq:
     #   JSON.unsafe_load(source, options = {}) -> object
@@ -2099,7 +2110,7 @@ class JSON::Fragment < ::Struct
   def json=(_); end
 
   # pkg:gem/json#lib/json/common.rb:307
-  def to_json(state = T.unsafe(nil), *_arg1); end
+  def to_json(state = T.unsafe(nil), *); end
 
   class << self
     # pkg:gem/json#lib/json/common.rb:298
@@ -2127,7 +2138,7 @@ class JSON::GeneratorError < ::JSON::JSONError
   def initialize(message, invalid_object = T.unsafe(nil)); end
 
   # pkg:gem/json#lib/json/common.rb:276
-  def detailed_message(*_arg0, **_arg1, &_arg2); end
+  def detailed_message(*, **, &); end
 
   # pkg:gem/json#lib/json/common.rb:269
   def invalid_object; end
@@ -2144,13 +2155,13 @@ module JSON::GeneratorMethods
   # This is a fallback, if no special method #to_json was defined for some object.
   #
   # pkg:gem/json#lib/json/common.rb:1119
-  def to_json(state = T.unsafe(nil), *_arg1); end
+  def to_json(state = T.unsafe(nil), *); end
 end
 
 # pkg:gem/json#lib/json/generic_object.rb:9
 class JSON::GenericObject < ::OpenStruct
   # pkg:gem/json#lib/json/generic_object.rb:59
-  def as_json(*_arg0); end
+  def as_json(*); end
 
   # pkg:gem/json#lib/json/generic_object.rb:51
   def to_hash; end

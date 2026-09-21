@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "4.0.6"
+ruby "4.0.7"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.3"
@@ -36,7 +36,7 @@ gem "bootsnap", require: false
 
 gem "ostruct", "~> 0.6.2", require: false
 gem "rack-cors", "~> 3.0", require: "rack/cors"
-gem "jwt", "~> 3.2"
+gem "jwt", "~> 3.3"
 gem "httparty", "~> 0.24.2"
 
 group :development, :test do

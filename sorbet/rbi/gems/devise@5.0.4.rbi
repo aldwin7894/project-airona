@@ -1670,13 +1670,13 @@ class Devise::FailureApp < ::ActionController::Metal
   def default_url_options?; end
 
   # pkg:gem/devise#lib/devise/failure_app.rb:19
-  def flash(*_arg0, **_arg1, &_arg2); end
+  def flash(*, **, &); end
 
   # pkg:gem/devise#lib/devise/failure_app.rb:52
   def http_auth; end
 
   # pkg:gem/devise#lib/devise/failure_app.rb:12
-  def logger(*_arg0, **_arg1, &_arg2); end
+  def logger(*, **, &); end
 
   # pkg:gem/devise#lib/devise/failure_app.rb:12
   def logger=(arg); end
@@ -1857,7 +1857,7 @@ class Devise::FailureApp < ::ActionController::Metal
     def default_url_options?; end
 
     # pkg:gem/devise#lib/devise/failure_app.rb:12
-    def logger(*_arg0, **_arg1, &_arg2); end
+    def logger(*, **, &); end
 
     # pkg:gem/devise#lib/devise/failure_app.rb:12
     def logger=(arg); end
@@ -1938,10 +1938,10 @@ class Devise::Hooks::Proxy
   def initialize(warden); end
 
   # pkg:gem/devise#lib/devise/hooks/proxy.rb:12
-  def cookies(*_arg0, **_arg1, &_arg2); end
+  def cookies(*, **, &); end
 
   # pkg:gem/devise#lib/devise/hooks/proxy.rb:12
-  def request(*_arg0, **_arg1, &_arg2); end
+  def request(*, **, &); end
 
   # pkg:gem/devise#lib/devise/hooks/proxy.rb:18
   def session; end
@@ -3064,7 +3064,7 @@ module Devise::Models::Lockable
   def lock_access!(opts = T.unsafe(nil)); end
 
   # pkg:gem/devise#lib/devise/models/lockable.rb:27
-  def lock_strategy_enabled?(*_arg0, **_arg1, &_arg2); end
+  def lock_strategy_enabled?(*, **, &); end
 
   # Resend the unlock instructions if the user is locked.
   #
@@ -3090,7 +3090,7 @@ module Devise::Models::Lockable
   def unlock_access!; end
 
   # pkg:gem/devise#lib/devise/models/lockable.rb:27
-  def unlock_strategy_enabled?(*_arg0, **_arg1, &_arg2); end
+  def unlock_strategy_enabled?(*, **, &); end
 
   # Overwrites valid_for_authentication? from Devise::Models::Authenticatable
   # for verifying whether a user is allowed to sign in or not. If the user
@@ -4171,7 +4171,7 @@ module Devise::Test::ControllerHelpers
   # Override process to consider warden.
   #
   # pkg:gem/devise#lib/devise/test/controller_helpers.rb:34
-  def process(*_arg0, **_arg1); end
+  def process(*, **); end
 
   # We need to set up the environment variables and the response in the controller.
   #
@@ -4264,7 +4264,7 @@ class Devise::TimeInflector
     def instance; end
 
     # pkg:gem/devise#lib/devise/time_inflector.rb:11
-    def time_ago_in_words(*_arg0, **_arg1, &_arg2); end
+    def time_ago_in_words(*, **, &); end
   end
 end
 
