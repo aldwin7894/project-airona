@@ -38,6 +38,7 @@ gem "ostruct", "~> 0.6.2", require: false
 gem "rack-cors", "~> 3.0", require: "rack/cors"
 gem "jwt", "~> 3.3"
 gem "httparty", "~> 0.24.2"
+gem "json", "~> 2.21.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
