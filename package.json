@@ -36,7 +36,7 @@
     "@typescript-eslint/parser": "^8.70.1",
     "autoprefixer": "^10.6.1",
     "cssnano": "^9.0.5",
-    "cssnano-preset-advanced": "^9.0.5",
+    "cssnano-preset-advanced": "^9.1.0",
     "daisyui": "^4.12.24",
     "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
