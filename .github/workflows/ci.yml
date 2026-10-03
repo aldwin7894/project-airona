@@ -18,6 +18,11 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Ensure latest Brakeman and Bundler Audit gems are installed
+        run: |
+          bundle config set frozen false
+          bundle update brakeman bundler-audit
+
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
 
