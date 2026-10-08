@@ -17,7 +17,7 @@ gem "redis", "~> 6.0"
 
 gem "devise", "~> 5.0"
 gem "dotenv", "~> 3.2.0"
-gem "lograge", "~> 0.15.0"
+gem "lograge", "~> 0.15.1"
 gem "logstash-event", "~> 1.2"
 gem "httplog", "~> 1.8"
 gem "responders", "~> 3.2"
