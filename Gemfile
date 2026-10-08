@@ -17,7 +17,7 @@ gem "redis", "~> 6.0"
 
 gem "devise", "~> 5.0"
 gem "dotenv", "~> 3.2.0"
-gem "lograge", "~> 0.15.0"
+gem "lograge", "~> 0.15.1"
 gem "logstash-event", "~> 1.2"
 gem "httplog", "~> 1.8"
 gem "responders", "~> 3.2"
@@ -37,7 +37,7 @@ gem "bootsnap", require: false
 gem "ostruct", "~> 0.6.2", require: false
 gem "rack-cors", "~> 3.0", require: "rack/cors"
 gem "jwt", "~> 3.3"
-gem "httparty", "~> 0.24.2"
+gem "httparty", "~> 0.24.3"
 gem "json", "~> 3.0.2"
 
 group :development, :test do
