@@ -7,7 +7,7 @@
   "author": "aldwin7894 <cyan@aldwin7894.dev>",
   "scripts": {
     "prettier": "prettier --write .",
-    "rails:dev": "bundle exec rails s -b 0.0.0.0",
+    "rails:dev": "bin/rails s -b 0.0.0.0",
     "vite:dev": "./bin/vite dev --debug"
   },
   "browserslist": [

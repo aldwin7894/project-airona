@@ -15,9 +15,9 @@ services:
     container_name: project-airona-redis
     image: redis:alpine
     restart: always
-    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: [ "CMD", "redis-cli", "ping" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -50,7 +50,7 @@ services:
       - db
       - redis
     ports:
-      - 3010:3000
+      - 127.0.0.1:3010:3000
     environment:
       - DATABASE_URL=mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@db:27027/${MONGO_DB}
       - REDIS_URL=redis://redis:6389
