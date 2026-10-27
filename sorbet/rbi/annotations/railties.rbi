@@ -29,7 +29,7 @@ module Rails
     def event; end
 
     # @version >= 7.1.0.rc1
-    sig { returns(T.all(ActiveSupport::BroadcastLogger, ActiveSupport::TaggedLogging)) }
+    sig { returns(ActiveSupport::BroadcastLogger) }
     def logger; end
 
     sig { returns(Pathname) }

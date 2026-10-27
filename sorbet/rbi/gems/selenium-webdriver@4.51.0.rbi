@@ -850,340 +850,340 @@ module Selenium::WebDriver::BiDi::Protocol; end
 #
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:29
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth < ::Selenium::WebDriver::BiDi::Protocol::Domain
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:331
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:335
   def bluetooth_manufacturer_data(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:332
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:336
   def characteristic_properties(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:358
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:362
   def disable_simulation(context:); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:338
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:342
   def handle_request_device_prompt(context:, prompt:, accept:, device: T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:333
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:337
   def scan_record(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:350
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:354
   def simulate_adapter(context:, state:, le_supported: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:378
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:382
   def simulate_advertisement(context:, scan_entry:); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:334
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:338
   def simulate_advertisement_scan_entry_parameters(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:407
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:411
   def simulate_characteristic(context:, address:, service_uuid:, characteristic_uuid:, type:, characteristic_properties: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:429
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:433
   def simulate_characteristic_response(context:, address:, service_uuid:, characteristic_uuid:, type:, code:, data: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:453
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:457
   def simulate_descriptor(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:468
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:472
   def simulate_descriptor_response(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:, code:, data: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:385
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:389
   def simulate_gatt_connection_response(context:, address:, code:); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:392
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:396
   def simulate_gatt_disconnection(context:, address:); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:365
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:369
   def simulate_preconnected_peripheral(context:, address:, name:, manufacturer_data:, known_service_uuids:); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:399
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:403
   def simulate_service(context:, address:, uuid:, type:); end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothbluetoothmanufacturerdata
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothbluetoothmanufacturerdata
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::BluetoothManufacturerData < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
   def data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
   def key; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:84
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:86
     def construct(**attributes); end
   end
 end
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:68
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:70
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::CHARACTERISTIC_EVENT_GENERATED_PARAMETERS_TYPE = T.let(T.unsafe(nil), Hash)
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothcharacteristiceventgeneratedparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothcharacteristiceventgeneratedparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::CharacteristicEventGeneratedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
   def characteristic_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
   def data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
   def service_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:304
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:306
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothcharacteristicproperties
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothcharacteristicproperties
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::CharacteristicProperties < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
   def authenticated_signed_writes; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
   def broadcast; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
   def extended_properties; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
   def indicate; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
   def notify; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
   def read; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
   def write; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
   def write_without_response; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:92
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:94
     def construct(**attributes); end
   end
 end
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:76
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:78
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::DESCRIPTOR_EVENT_GENERATED_PARAMETERS_TYPE = T.let(T.unsafe(nil), Hash)
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothdescriptoreventgeneratedparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothdescriptoreventgeneratedparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::DescriptorEventGeneratedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
   def characteristic_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
   def data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
   def descriptor_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
   def service_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:316
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:318
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothdisablesimulationparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothdisablesimulationparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:170
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:172
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::DisableSimulationParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:170
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:172
   def context; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:170
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:172
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:170
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:172
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:170
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:172
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:170
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:172
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:170
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:172
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:170
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:172
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:170
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:172
     def construct(**attributes); end
   end
 end
@@ -1191,61 +1191,61 @@ end
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:30
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::EVENTS = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:326
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:328
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::EVENT_TYPES = T.let(T.unsafe(nil), Hash)
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothgattconnectionattemptedparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothgattconnectionattemptedparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::GattConnectionAttemptedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
   def context; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:296
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:298
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothhandlerequestdevicepromptparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothhandlerequestdevicepromptparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:129
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:131
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::HandleRequestDevicePromptParameters < ::Selenium::WebDriver::BiDi::Serialization::Union
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:155
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:157
     def false(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:154
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:156
     def true(**); end
   end
 end
@@ -1253,45 +1253,45 @@ end
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::HandleRequestDevicePromptParameters::AcceptParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
   def accept; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
   def device; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
   def prompt; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:141
     def construct(**attributes); end
   end
 end
@@ -1299,724 +1299,724 @@ end
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::HandleRequestDevicePromptParameters::CancelParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
   def accept; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
   def prompt; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:148
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:150
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothrequestdeviceinfo
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothrequestdeviceinfo
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::RequestDeviceInfo < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
   def id; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
   def name; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:106
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:108
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothrequestdevicepromptupdatedparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothrequestdevicepromptupdatedparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::RequestDevicePromptUpdatedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
   def devices; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
   def prompt; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:287
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:289
     def construct(**attributes); end
   end
 end
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:35
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:37
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::SIMULATE_ADAPTER_PARAMETERS_STATE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:46
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:48
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::SIMULATE_CHARACTERISTIC_PARAMETERS_TYPE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:51
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:53
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::SIMULATE_CHARACTERISTIC_RESPONSE_PARAMETERS_TYPE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:58
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:60
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::SIMULATE_DESCRIPTOR_PARAMETERS_TYPE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:63
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:65
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::SIMULATE_DESCRIPTOR_RESPONSE_PARAMETERS_TYPE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:41
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:43
 Selenium::WebDriver::BiDi::Protocol::Bluetooth::SIMULATE_SERVICE_PARAMETERS_TYPE = T.let(T.unsafe(nil), Hash)
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothscanrecord
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothscanrecord
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::ScanRecord < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
   def appearance; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
   def manufacturer_data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
   def name; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
   def uuids; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:114
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:116
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulateadapterparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulateadapterparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateAdapterParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
   def le_supported; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
   def state; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:161
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:163
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulateadvertisementparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulateadvertisementparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateAdvertisementParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
   def scan_entry; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:188
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:190
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulateadvertisementscanentryparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulateadvertisementscanentryparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateAdvertisementScanEntryParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
   def device_address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
   def rssi; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
   def scan_record; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:196
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:198
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulatecharacteristicparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulatecharacteristicparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateCharacteristicParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
   def characteristic_properties; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
   def characteristic_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
   def service_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:232
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:234
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulatecharacteristicresponseparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulatecharacteristicresponseparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateCharacteristicResponseParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
   def characteristic_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
   def code; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
   def data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
   def service_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:248
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:250
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulatedescriptorparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulatedescriptorparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateDescriptorParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
   def characteristic_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
   def descriptor_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
   def service_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:261
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:263
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulatedescriptorresponseparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulatedescriptorresponseparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateDescriptorResponseParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
   def characteristic_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
   def code; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
   def data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
   def descriptor_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
   def service_uuid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:273
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:275
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulategattconnectionresponseparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulategattconnectionresponseparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateGattConnectionResponseParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
   def code; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
   def context; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:205
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:207
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulategattdisconnectionparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulategattdisconnectionparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateGattDisconnectionParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
   def context; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:214
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:216
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulatepreconnectedperipheralparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulatepreconnectedperipheralparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulatePreconnectedPeripheralParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
   def known_service_uuids; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
   def manufacturer_data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
   def name; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:177
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:179
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://webbluetoothcg.github.io/web-bluetooth/#cddl-type-bluetoothsimulateserviceparameters
+# @see https://bluetooth.spec.whatwg.org/#cddl-type-bluetoothsimulateserviceparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
 class Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateServiceParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
   def address; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
   def type; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
   def uuid; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:222
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/bluetooth.rb:224
     def construct(**attributes); end
   end
 end
@@ -2581,160 +2581,163 @@ end
 #
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:30
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext < ::Selenium::WebDriver::BiDi::Protocol::Domain
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:591
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:621
   def accessibility_locator(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:605
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:635
   def accessibility_locator_value(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-activate
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:611
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:642
   def activate(context:); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:600
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:630
   def box_clip_rectangle(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:619
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:650
   def capture_screenshot(context:, origin: T.unsafe(nil), format: T.unsafe(nil), clip: T.unsafe(nil), image_size: T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:598
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:628
   def clip_rectangle; end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-close
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:644
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:675
   def close(context:, prompt_unload: T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:593
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:623
   def context_locator(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:606
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:636
   def context_locator_value(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-create
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:652
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:683
   def create(type:, reference_context: T.unsafe(nil), background: T.unsafe(nil), user_context: T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:622
   def css_locator(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:599
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:629
   def element_clip_rectangle(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-getTree
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:671
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:702
   def get_tree(max_depth: T.unsafe(nil), root: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-handleUserPrompt
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:679
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:710
   def handle_user_prompt(context:, accept: T.unsafe(nil), user_text: T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:596
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:626
   def image_format(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:597
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:627
   def image_size(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:594
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:624
   def inner_text_locator(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-locateNodes
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:687
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:718
   def locate_nodes(context:, locator:, max_node_count: T.unsafe(nil), serialization_options: T.unsafe(nil), start_nodes: T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:590
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:620
   def locator; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:604
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:634
   def media_track_constraints(**); end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:637
+  def moz; end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-navigate
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:707
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:738
   def navigate(context:, url:, wait: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-print
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:716
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:747
   def print(context:, background: T.unsafe(nil), margin: T.unsafe(nil), orientation: T.unsafe(nil), page: T.unsafe(nil), page_ranges: T.unsafe(nil), scale: T.unsafe(nil), shrink_to_fit: T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:601
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:631
   def print_margin_parameters(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:602
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:632
   def print_page_parameters(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-reload
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:743
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:774
   def reload(context:, ignore_cache: T.unsafe(nil), wait: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-setBypassCSP
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:752
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:783
   def set_bypass_csp(bypass:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-setViewport
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:760
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:791
   def set_viewport(context: T.unsafe(nil), viewport: T.unsafe(nil), device_pixel_ratio: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-startScreencast
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:778
-  def start_screencast(context:, mime_type: T.unsafe(nil), video: T.unsafe(nil), audio: T.unsafe(nil)); end
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:809
+  def start_screencast(context:, destination_folder: T.unsafe(nil), mime_type: T.unsafe(nil), video: T.unsafe(nil), audio: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-stopScreencast
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:795
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:833
   def stop_screencast(screencast:); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-traverseHistory
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:807
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:845
   def traverse_history(context:, delta:); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:603
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:633
   def viewport(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:595
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:625
   def x_path_locator(**); end
 end
 
@@ -2742,76 +2745,76 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextaccessibilitylocator
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::AccessibilityLocator < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
   def type; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
   def value; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:127
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:141
     def construct(**attributes); end
   end
 end
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::AccessibilityLocator::Value < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
   def name; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
   def role; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:148
     def construct(**attributes); end
   end
 end
@@ -2820,988 +2823,46 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextactivateparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:203
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:217
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ActivateParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:203
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:217
   def context; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:203
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:217
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:203
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:217
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:203
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:217
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:203
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:217
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:203
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:217
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:203
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:217
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:203
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:217
     def construct(**attributes); end
   end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextbasenavigationinfo
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::BaseNavigationInfo < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-  def context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-  def navigation; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-  def timestamp; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-  def url; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-  def user_context; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:181
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextboxcliprectangle
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::BoxClipRectangle < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-  def height; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-  def type; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-  def width; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-  def x; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-  def y; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
-    def construct(**attributes); end
-  end
-end
-
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:74
-Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CAPTURE_SCREENSHOT_PARAMETERS_ORIGIN = T.let(T.unsafe(nil), Hash)
-
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcreatetype
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:64
-Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CREATE_TYPE = T.let(T.unsafe(nil), Hash)
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcapturescreenshotparameters
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CaptureScreenshotParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-  def clip; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-  def context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-  def format; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-  def image_size; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-  def origin; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:208
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcapturescreenshotresult
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:269
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CaptureScreenshotResult < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:269
-  def data; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:269
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:269
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:269
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:269
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:269
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:269
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:269
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcliprectangle
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:235
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ClipRectangle < ::Selenium::WebDriver::BiDi::Serialization::Union
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:243
-    def box(**); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:244
-    def element(**); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcloseparameters
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CloseParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-  def context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-  def prompt_unload; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:274
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcontextlocator
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ContextLocator < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-  def type; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-  def value; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:150
-    def construct(**attributes); end
-  end
-end
-
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:157
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ContextLocator::Value < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:157
-  def context; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:157
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:157
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:157
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:157
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:157
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:157
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:157
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcreateparameters
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CreateParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-  def background; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-  def reference_context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-  def type; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-  def user_context; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:282
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcreateresult
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CreateResult < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-  def context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-  def user_context; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:292
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcsslocator
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CssLocator < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-  def type; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-  def value; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:142
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextdownloadendparams
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:513
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadEndParams < ::Selenium::WebDriver::BiDi::Serialization::Union
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:546
-    def canceled(**); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:547
-    def complete(**); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadEndParams::CanceledParams < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-  def context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-  def download; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-  def navigation; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-  def status; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-  def timestamp; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-  def url; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-  def user_context; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:523
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadEndParams::CompleteParams < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-  def context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-  def download; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-  def filepath; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-  def navigation; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-  def status; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-  def timestamp; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-  def url; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-  def user_context; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:535
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextdownloadwillbeginparams
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadWillBeginParams < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-  def context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-  def download; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-  def navigation; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-  def suggested_filename; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-  def timestamp; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-  def url; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-  def user_context; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:500
-    def construct(**attributes); end
-  end
-end
-
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:31
-Selenium::WebDriver::BiDi::Protocol::BrowsingContext::EVENTS = T.let(T.unsafe(nil), Hash)
-
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:573
-Selenium::WebDriver::BiDi::Protocol::BrowsingContext::EVENT_TYPES = T.let(T.unsafe(nil), Hash)
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextelementcliprectangle
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ElementClipRectangle < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-  def element; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-  def type; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:250
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextgettreeparameters
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::GetTreeParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-  def max_depth; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-  def root; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:300
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextgettreeresult
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:308
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::GetTreeResult < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:308
-  def contexts; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:308
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:308
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:308
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:308
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:308
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:308
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:308
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontexthandleuserpromptparameters
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::HandleUserPromptParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-  def accept; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-  def context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-  def user_text; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:315
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontexthistoryupdatedparameters
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::HistoryUpdatedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-  def context; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-  def timestamp; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-  def url; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-  def user_context; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
-    def construct(**attributes); end
-  end
-end
-
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:69
-Selenium::WebDriver::BiDi::Protocol::BrowsingContext::INNER_TEXT_LOCATOR_MATCH_TYPE = T.let(T.unsafe(nil), Hash)
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextimageformat
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ImageFormat < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-  def quality; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-  def type; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:219
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextimagesize
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ImageSize < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-  def max_height; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-  def max_width; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:227
-    def construct(**attributes); end
-  end
-end
-
-# @api private
-# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#type-browsingContext-Info
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextbaseinfo
 #
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:87
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Info < ::Selenium::WebDriver::BiDi::Serialization::Record
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::BaseInfo < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
@@ -3854,50 +2915,1113 @@ end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextinnertextlocator
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextbasenavigationinfo
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
-class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::InnerTextLocator < ::Selenium::WebDriver::BiDi::Serialization::Record
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::BaseNavigationInfo < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
-  def ignore_case; end
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
+  def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
-  def match_type; end
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
+  def navigation; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
-  def max_depth; end
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
+  def timestamp; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
-  def type; end
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
+  def url; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
-  def value; end
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
+  def user_context; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:162
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:195
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextboxcliprectangle
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::BoxClipRectangle < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+  def height; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+  def type; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+  def width; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+  def x; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+  def y; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:272
+    def construct(**attributes); end
+  end
+end
+
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:74
+Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CAPTURE_SCREENSHOT_PARAMETERS_ORIGIN = T.let(T.unsafe(nil), Hash)
+
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcreatetype
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:64
+Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CREATE_TYPE = T.let(T.unsafe(nil), Hash)
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcapturescreenshotparameters
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CaptureScreenshotParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+  def clip; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+  def format; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+  def image_size; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+  def origin; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:222
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcapturescreenshotresult
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:283
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CaptureScreenshotResult < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:283
+  def data; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:283
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:283
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:283
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:283
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:283
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:283
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:283
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcliprectangle
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:249
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ClipRectangle < ::Selenium::WebDriver::BiDi::Serialization::Union
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:257
+    def box(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:258
+    def element(**); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcloseparameters
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CloseParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+  def prompt_unload; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:288
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcontextcreatedparameters
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ContextCreatedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+  def children; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+  def client_window; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+  def has_planned_navigation; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+  def original_opener; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+  def parent; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+  def url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+  def user_context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:592
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcontextlocator
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ContextLocator < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+  def type; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+  def value; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:164
+    def construct(**attributes); end
+  end
+end
+
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:171
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ContextLocator::Value < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:171
+  def context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:171
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:171
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:171
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:171
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:171
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:171
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:171
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcreateparameters
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CreateParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+  def background; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+  def reference_context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+  def type; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+  def user_context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:296
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcreateresult
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CreateResult < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+  def user_context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:306
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextcsslocator
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CssLocator < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+  def type; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+  def value; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:156
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextdownloadendparams
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:529
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadEndParams < ::Selenium::WebDriver::BiDi::Serialization::Union
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:562
+    def canceled(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:563
+    def complete(**); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadEndParams::CanceledParams < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+  def download; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+  def navigation; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+  def status; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+  def timestamp; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+  def url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+  def user_context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:539
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadEndParams::CompleteParams < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+  def download; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+  def filepath; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+  def navigation; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+  def status; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+  def timestamp; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+  def url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+  def user_context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:551
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextdownloadwillbeginparams
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadWillBeginParams < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+  def download; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+  def navigation; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+  def suggested_filename; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+  def timestamp; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+  def url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+  def user_context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:516
+    def construct(**attributes); end
+  end
+end
+
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:31
+Selenium::WebDriver::BiDi::Protocol::BrowsingContext::EVENTS = T.let(T.unsafe(nil), Hash)
+
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:603
+Selenium::WebDriver::BiDi::Protocol::BrowsingContext::EVENT_TYPES = T.let(T.unsafe(nil), Hash)
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextelementcliprectangle
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ElementClipRectangle < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+  def element; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+  def type; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:264
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextgettreeparameters
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::GetTreeParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+  def extensions; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+  def max_depth; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+  def root; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:314
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextgettreeresult
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:323
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::GetTreeResult < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:323
+  def contexts; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:323
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:323
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:323
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:323
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:323
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:323
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:323
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontexthandleuserpromptparameters
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::HandleUserPromptParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+  def accept; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+  def user_text; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:330
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontexthistoryupdatedparameters
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::HistoryUpdatedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+  def timestamp; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+  def url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+  def user_context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:506
+    def construct(**attributes); end
+  end
+end
+
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:69
+Selenium::WebDriver::BiDi::Protocol::BrowsingContext::INNER_TEXT_LOCATOR_MATCH_TYPE = T.let(T.unsafe(nil), Hash)
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextimageformat
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ImageFormat < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+  def quality; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+  def type; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:233
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextimagesize
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ImageSize < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+  def max_height; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+  def max_width; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:241
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#type-browsingContext-Info
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Info < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+  def children; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+  def client_window; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+  def extensions; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+  def original_opener; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+  def parent; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+  def url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+  def user_context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextinnertextlocator
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::InnerTextLocator < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+  def ignore_case; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+  def match_type; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+  def max_depth; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+  def type; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+  def value; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:176
     def construct(**attributes); end
   end
 end
@@ -3906,48 +4030,48 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextlocatenodesparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::LocateNodesParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
   def locator; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
   def max_node_count; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
   def serialization_options; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
   def start_nodes; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:324
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
     def construct(**attributes); end
   end
 end
@@ -3956,36 +4080,36 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextlocatenodesresult
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:354
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::LocateNodesResult < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:354
   def nodes; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:354
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:354
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:354
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:354
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:354
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:354
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:339
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:354
     def construct(**attributes); end
   end
 end
@@ -3994,22 +4118,22 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#type-browsingContext-Locator
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:100
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:114
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Locator < ::Selenium::WebDriver::BiDi::Serialization::Union
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:117
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:131
     def accessibility(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:119
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:133
     def context(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:118
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:132
     def css(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:120
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:134
     def inner_text(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:121
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:135
     def xpath(**); end
   end
 end
@@ -4018,86 +4142,100 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextmediatrackconstraints
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::MediaTrackConstraints < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
   def frame_rate; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
   def height; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
   def width; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:450
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:466
     def construct(**attributes); end
   end
+end
+
+# @api private
+# moz: vendor variant of BrowsingContext, with browser-specific commands and params.
+# Construct Moz.new(source) for a matching session; other sessions use BrowsingContext.
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:853
+class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Moz < ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  # @see https://w3c.github.io/webdriver-bidi/#command-browsingContext-getTree
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:857
+  def get_tree(max_depth: T.unsafe(nil), root: T.unsafe(nil), scope: T.unsafe(nil)); end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextnavigateparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigateParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
   def url; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
   def wait; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:346
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:361
     def construct(**attributes); end
   end
 end
@@ -4106,39 +4244,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextnavigateresult
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigateResult < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
   def navigation; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
   def url; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:355
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:370
     def construct(**attributes); end
   end
 end
@@ -4147,48 +4285,48 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#type-browsingContext-NavigationInfo
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
   def navigation; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
   def timestamp; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
   def url; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
   def user_context; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:192
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:206
     def construct(**attributes); end
   end
 end
@@ -4200,45 +4338,45 @@ Selenium::WebDriver::BiDi::Protocol::BrowsingContext::PRINT_PARAMETERS_ORIENTATI
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextprintmarginparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::PrintMarginParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
   def bottom; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
   def left; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
   def right; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
   def top; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:381
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:396
     def construct(**attributes); end
   end
 end
@@ -4247,39 +4385,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextprintpageparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::PrintPageParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
   def height; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
   def width; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:391
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:406
     def construct(**attributes); end
   end
 end
@@ -4288,57 +4426,57 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextprintparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::PrintParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
   def background; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
   def margin; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
   def orientation; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
   def page; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
   def page_ranges; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
   def scale; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
   def shrink_to_fit; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:363
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:378
     def construct(**attributes); end
   end
 end
@@ -4347,36 +4485,36 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextprintresult
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:399
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:414
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::PrintResult < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:399
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:414
   def data; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:399
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:414
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:399
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:414
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:399
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:414
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:399
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:414
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:399
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:414
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:399
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:414
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:399
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:414
     def construct(**attributes); end
   end
 end
@@ -4390,42 +4528,42 @@ Selenium::WebDriver::BiDi::Protocol::BrowsingContext::READINESS_STATE = T.let(T.
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextreloadparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ReloadParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
   def ignore_cache; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
   def wait; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:404
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:419
     def construct(**attributes); end
   end
 end
@@ -4434,42 +4572,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextsetbypasscspparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::SetBypassCSPParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
   def bypass; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:413
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:428
     def construct(**attributes); end
   end
 end
@@ -4478,45 +4616,45 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextsetviewportparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::SetViewportParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
   def device_pixel_ratio; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
   def user_contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
   def viewport; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:422
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:437
     def construct(**attributes); end
   end
 end
@@ -4525,45 +4663,48 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextstartscreencastparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::StartScreencastParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
   def audio; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
+  def destination_folder; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
   def mime_type; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
   def video; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:455
     def construct(**attributes); end
   end
 end
@@ -4572,39 +4713,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextstartscreencastresult
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::StartScreencastResult < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
   def path; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
   def screencast; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:459
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:475
     def construct(**attributes); end
   end
 end
@@ -4613,36 +4754,36 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextstopscreencastparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:467
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:483
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::StopScreencastParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:467
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:483
   def screencast; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:467
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:483
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:467
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:483
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:467
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:483
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:467
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:483
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:467
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:483
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:467
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:483
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:467
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:483
     def construct(**attributes); end
   end
 end
@@ -4651,39 +4792,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextstopscreencastresult
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::StopScreencastResult < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
   def error; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
   def path; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:474
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:490
     def construct(**attributes); end
   end
 end
@@ -4692,39 +4833,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontexttraversehistoryparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::TraverseHistoryParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
   def delta; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:482
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:498
     def construct(**attributes); end
   end
 end
@@ -4738,48 +4879,48 @@ Selenium::WebDriver::BiDi::Protocol::BrowsingContext::USER_PROMPT_TYPE = T.let(T
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextuserpromptclosedparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::UserPromptClosedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
   def accepted; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
   def type; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
   def user_context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
   def user_text; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:553
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:569
     def construct(**attributes); end
   end
 end
@@ -4788,51 +4929,51 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextuserpromptopenedparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::UserPromptOpenedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
   def default_value; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
   def handler; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
   def message; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
   def type; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
   def user_context; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:564
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:580
     def construct(**attributes); end
   end
 end
@@ -4841,39 +4982,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextviewport
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Viewport < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
   def height; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
   def width; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:432
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:447
     def construct(**attributes); end
   end
 end
@@ -4882,42 +5023,106 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-browsingcontextxpathlocator
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
 class Selenium::WebDriver::BiDi::Protocol::BrowsingContext::XPathLocator < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
   def type; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
   def value; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/browsing_context.rb:187
     def construct(**attributes); end
   end
 end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:29
+class Selenium::WebDriver::BiDi::Protocol::DigitalCredentials < ::Selenium::WebDriver::BiDi::Protocol::Domain
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:50
+  def set_virtual_wallet_behavior(action:, context: T.unsafe(nil), protocol: T.unsafe(nil), response: T.unsafe(nil)); end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c-fedid.github.io/digital-credentials/#cddl-type-digitalcredentials-setvirtualwalletbehaviorparameters
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+class Selenium::WebDriver::BiDi::Protocol::DigitalCredentials::SetVirtualWalletBehaviorParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+  def action; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+  def protocol; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+  def response; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:41
+    def construct(**attributes); end
+  end
+end
+
+# @see https://w3c-fedid.github.io/digital-credentials/#cddl-type-digitalcredentials-virtualwalletaction
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/digital_credentials.rb:31
+Selenium::WebDriver::BiDi::Protocol::DigitalCredentials::VIRTUAL_WALLET_ACTION = T.let(T.unsafe(nil), Hash)
 
 # @api private
 #
@@ -4944,113 +5149,120 @@ end
 #
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:30
 class Selenium::WebDriver::BiDi::Protocol::Emulation < ::Selenium::WebDriver::BiDi::Protocol::Domain
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:512
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:526
   def geolocation_coordinates(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:513
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:527
   def geolocation_position_error(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:514
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:528
   def media_features(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:515
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:529
   def network_conditions_offline(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:516
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:530
   def screen_area(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:517
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:531
   def screen_orientation(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setForcedColorsModeThemeOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:522
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:536
   def set_forced_colors_mode_theme_override(theme:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setGeolocationOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:539
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:553
   def set_geolocation_override(contexts: T.unsafe(nil), user_contexts: T.unsafe(nil), coordinates: T.unsafe(nil), error: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setLocaleOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:557
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:571
   def set_locale_override(locale:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setMediaFeaturesOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:565
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:579
   def set_media_features_override(features:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setNetworkConditions
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:581
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:595
   def set_network_conditions(network_conditions:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setScreenOrientationOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:597
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:611
   def set_screen_orientation_override(screen_orientation:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setScreenSettingsOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:613
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:627
   def set_screen_settings_override(screen_area:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setScriptingEnabled
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:629
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:643
   def set_scripting_enabled(enabled:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setScrollbarTypeOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:641
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:655
   def set_scrollbar_type_override(scrollbar_type:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setTextLayoutModeOverride
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:676
+  def set_text_layout_mode_override(text_layout_mode:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setTimezoneOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:662
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:693
   def set_timezone_override(timezone:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setTouchOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:674
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:705
   def set_touch_override(max_touch_points:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setUserAgentOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:686
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:717
   def set_user_agent_override(user_agent:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-emulation-setViewportMetaOverride
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:698
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:729
   def set_viewport_meta_override(viewport_meta:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 end
 
@@ -5063,54 +5275,54 @@ Selenium::WebDriver::BiDi::Protocol::Emulation::FORCED_COLORS_MODE_THEME = T.let
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationgeolocationcoordinates
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
 class Selenium::WebDriver::BiDi::Protocol::Emulation::GeolocationCoordinates < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
   def accuracy; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
   def altitude; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
   def altitude_accuracy; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
   def heading; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
   def latitude; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
   def longitude; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
   def speed; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:229
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:234
     def construct(**attributes); end
   end
 end
@@ -5119,230 +5331,230 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationgeolocationpositionerror
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:242
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
 class Selenium::WebDriver::BiDi::Protocol::Emulation::GeolocationPositionError < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:242
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:242
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:242
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:242
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:242
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:242
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:242
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:242
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
     def construct(**attributes); end
   end
 end
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:51
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:56
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_ANY_HOVER = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:56
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:61
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_ANY_POINTER = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:62
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:67
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_COLOR_GAMUT = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:68
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:73
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_DISPLAY_MODE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:76
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:81
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_DYNAMIC_RANGE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:81
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:86
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_ENVIRONMENT_BLENDING = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:87
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:92
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_FORCED_COLORS = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:92
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:97
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_GRID = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:97
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:102
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_HOVER = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:102
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:107
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_INVERTED_COLORS = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:107
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:112
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_NAV_CONTROLS = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:112
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:117
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_OVERFLOW_BLOCK = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:119
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:124
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_OVERFLOW_INLINE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:124
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:129
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_POINTER = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:130
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:135
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_PREFERS_COLOR_SCHEME = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:135
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:140
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_PREFERS_CONTRAST = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:142
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:147
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_PREFERS_REDUCED_DATA = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:147
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:152
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_PREFERS_REDUCED_MOTION = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:152
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:157
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_PREFERS_REDUCED_TRANSPARENCY = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:157
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:162
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_SCAN = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:162
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:167
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_SCRIPTING = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:168
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:173
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_UPDATE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:174
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:179
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_VIDEO_COLOR_GAMUT = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:180
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:185
 Selenium::WebDriver::BiDi::Protocol::Emulation::MEDIA_FEATURES_VIDEO_DYNAMIC_RANGE = T.let(T.unsafe(nil), Hash)
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationmediafeatures
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
 class Selenium::WebDriver::BiDi::Protocol::Emulation::MediaFeatures < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def any_hover; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def any_pointer; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def color; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def color_gamut; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def color_index; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def display_mode; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def dynamic_range; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def environment_blending; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def forced_colors; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def grid; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def horizontal_viewport_segments; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def hover; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def inverted_colors; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def monochrome; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def nav_controls; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def overflow_block; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def overflow_inline; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def pointer; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def prefers_color_scheme; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def prefers_contrast; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def prefers_reduced_data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def prefers_reduced_motion; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def prefers_reduced_transparency; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def scan; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def scripting; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def update; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def vertical_viewport_segments; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def video_color_gamut; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
   def video_dynamic_range; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:265
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:270
     def construct(**attributes); end
   end
 end
@@ -5351,36 +5563,36 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationnetworkconditionsoffline
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:418
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
 class Selenium::WebDriver::BiDi::Protocol::Emulation::NetworkConditionsOffline < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:418
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:418
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:418
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:418
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:418
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:418
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:418
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:418
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
     def construct(**attributes); end
   end
 end
@@ -5395,46 +5607,46 @@ Selenium::WebDriver::BiDi::Protocol::Emulation::SCREEN_ORIENTATION_NATURAL = T.l
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:44
 Selenium::WebDriver::BiDi::Protocol::Emulation::SCREEN_ORIENTATION_TYPE = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:185
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:190
 Selenium::WebDriver::BiDi::Protocol::Emulation::SET_SCROLLBAR_TYPE_OVERRIDE_PARAMETERS_SCROLLBAR_TYPE = T.let(T.unsafe(nil), Hash)
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationscreenarea
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
 class Selenium::WebDriver::BiDi::Protocol::Emulation::ScreenArea < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
   def height; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
   def width; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:423
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:428
     def construct(**attributes); end
   end
 end
@@ -5443,39 +5655,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationscreenorientation
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
 class Selenium::WebDriver::BiDi::Protocol::Emulation::ScreenOrientation < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
   def natural; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:440
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:445
     def construct(**attributes); end
   end
 end
@@ -5484,42 +5696,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetforcedcolorsmodethemeoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetForcedColorsModeThemeOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
   def theme; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:198
     def construct(**attributes); end
   end
 end
@@ -5528,48 +5740,48 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetgeolocationoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:202
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:207
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetGeolocationOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Union; end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetGeolocationOverrideParameters::Coordinates < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
   def coordinates; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:211
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:216
     def construct(**attributes); end
   end
 end
@@ -5577,42 +5789,42 @@ end
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetGeolocationOverrideParameters::Error < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
   def error; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:219
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:224
     def construct(**attributes); end
   end
 end
@@ -5621,42 +5833,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetlocaleoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetLocaleOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
   def locale; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:247
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:252
     def construct(**attributes); end
   end
 end
@@ -5665,42 +5877,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetmediafeaturesoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetMediaFeaturesOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
   def features; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:256
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:261
     def construct(**attributes); end
   end
 end
@@ -5709,42 +5921,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetnetworkconditionsparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetNetworkConditionsParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
   def network_conditions; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:405
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:410
     def construct(**attributes); end
   end
 end
@@ -5753,42 +5965,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetscreenorientationoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetScreenOrientationOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
   def screen_orientation; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:448
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:453
     def construct(**attributes); end
   end
 end
@@ -5797,42 +6009,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetscreensettingsoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetScreenSettingsOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
   def screen_area; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:431
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:436
     def construct(**attributes); end
   end
 end
@@ -5841,42 +6053,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetscriptingenabledparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetScriptingEnabledParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
   def enabled; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:475
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:480
     def construct(**attributes); end
   end
 end
@@ -5885,42 +6097,86 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetscrollbartypeoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetScrollbarTypeOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
   def scrollbar_type; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:484
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:489
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsettextlayoutmodeoverrideparameters
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+class Selenium::WebDriver::BiDi::Protocol::Emulation::SetTextLayoutModeOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+  def contexts; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+  def text_layout_mode; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+  def user_contexts; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:502
     def construct(**attributes); end
   end
 end
@@ -5929,42 +6185,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsettimezoneoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetTimezoneOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
   def timezone; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:497
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:511
     def construct(**attributes); end
   end
 end
@@ -5973,42 +6229,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsettouchoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetTouchOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
   def max_touch_points; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:506
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:520
     def construct(**attributes); end
   end
 end
@@ -6017,42 +6273,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetuseragentoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetUserAgentOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
   def user_agent; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:457
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:462
     def construct(**attributes); end
   end
 end
@@ -6061,45 +6317,50 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationsetviewportmetaoverrideparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
 class Selenium::WebDriver::BiDi::Protocol::Emulation::SetViewportMetaOverrideParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
   def user_contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
   def viewport_meta; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:466
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:471
     def construct(**attributes); end
   end
 end
+
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-emulationtextlayoutmode
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/emulation.rb:52
+Selenium::WebDriver::BiDi::Protocol::Emulation::TEXT_LAYOUT_MODE = T.let(T.unsafe(nil), Hash)
 
 # The BiDi ErrorCode enum: each wire value mapped to its Ruby exception class name.
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -7378,6 +7639,1256 @@ end
 #
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/log.rb:36
 Selenium::WebDriver::BiDi::Protocol::Log::LEVEL = T.let(T.unsafe(nil), Hash)
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:29
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging < ::Selenium::WebDriver::BiDi::Protocol::Domain
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:266
+  def get_script_source(context:, script_url:); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:273
+  def list_scripts(context:); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:280
+  def remove_breakpoint(breakpoint:); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:287
+  def resume(context:); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:294
+  def set_breakpoint(location:); end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:262
+  def set_breakpoint_parameters_location(**); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:301
+  def set_debugger_enabled(enabled:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:312
+  def step_into(context:); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:319
+  def step_out(context:); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:326
+  def step_over(context:); end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::BaseLocation < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+  def line; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+  def url; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:84
+    def construct(**attributes); end
+  end
+end
+
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:30
+Selenium::WebDriver::BiDi::Protocol::MozDebugging::EVENTS = T.let(T.unsafe(nil), Hash)
+
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:257
+Selenium::WebDriver::BiDi::Protocol::MozDebugging::EVENT_TYPES = T.let(T.unsafe(nil), Hash)
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::GetScriptSourceParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+  def script_url; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:37
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:44
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::GetScriptSourceResult < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:44
+  def source; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:44
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:44
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:44
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:44
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:44
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:44
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:44
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:48
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::ListScriptsParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:48
+  def context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:48
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:48
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:48
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:48
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:48
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:48
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:48
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:52
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::ListScriptsResult < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:52
+  def scripts; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:52
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:52
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:52
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:52
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:52
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:52
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:52
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::PausedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+  def call_frames; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+  def column; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+  def context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+  def line; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+  def url; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:111
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::PausedParametersCallFrame < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+  def call_frame_id; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+  def function_name; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+  def location; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+  def scope_chain; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:121
+    def construct(**attributes); end
+  end
+end
+
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::PausedParametersCallFrame::Location < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+  def column; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+  def line; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+  def url; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:130
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::PausedParametersScope < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+  def type; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+  def variables; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:138
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:145
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::PausedParametersScopeValue < ::Selenium::WebDriver::BiDi::Serialization::Union
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:220
+    def array(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:234
+    def arraybuffer(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:218
+    def bigint(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:217
+    def boolean(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:224
+    def date(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:230
+    def error(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:222
+    def function(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:229
+    def generator(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:236
+    def htmlcollection(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:225
+    def map(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:210
+    def missing_arguments(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:237
+    def node(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:235
+    def nodelist(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:214
+    def null(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:216
+    def number(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:221
+    def object(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:211
+    def optimized_out(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:232
+    def promise(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:231
+    def proxy(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:223
+    def regexp(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:226
+    def set(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:215
+    def string(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:219
+    def symbol(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:233
+    def typedarray(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:213
+    def undefined(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:212
+    def uninitialized(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:227
+    def weakmap(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:228
+    def weakset(**); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:238
+    def window(**); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:243
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::PausedParametersScopeValueMissingArguments < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:243
+  def type; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:243
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:243
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:243
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:243
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:243
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:243
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:243
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:247
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::PausedParametersScopeValueOptimizedOut < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:247
+  def type; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:247
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:247
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:247
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:247
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:247
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:247
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:247
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:251
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::PausedParametersScopeValueUninitialized < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:251
+  def type; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:251
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:251
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:251
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:251
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:251
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:251
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:251
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:56
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::RemoveBreakpointParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:56
+  def breakpoint; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:56
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:56
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:56
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:56
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:56
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:56
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:56
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:62
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::ResumeParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:62
+  def context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:62
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:62
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:62
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:62
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:62
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:62
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:62
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:255
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::ResumedParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:255
+  def context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:255
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:255
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:255
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:255
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:255
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:255
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:255
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:66
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::SetBreakpointParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:66
+  def location; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:66
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:66
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:66
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:66
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:66
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:66
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:66
+    def construct(**attributes); end
+  end
+end
+
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::SetBreakpointParameters::Location < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+  def column; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+  def line; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+  def url; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:72
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:80
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::SetBreakpointResult < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:80
+  def breakpoint; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:80
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:80
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:80
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:80
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:80
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:80
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:80
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::SetDebuggerEnabledParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+  def contexts; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+  def enabled; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+  def user_contexts; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:91
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:99
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::StepIntoParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:99
+  def context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:99
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:99
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:99
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:99
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:99
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:99
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:99
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:103
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::StepOutParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:103
+  def context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:103
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:103
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:103
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:103
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:103
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:103
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:103
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:107
+class Selenium::WebDriver::BiDi::Protocol::MozDebugging::StepOverParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:107
+  def context; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:107
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:107
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:107
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:107
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:107
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:107
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_debugging.rb:107
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:29
+class Selenium::WebDriver::BiDi::Protocol::MozProfiler < ::Selenium::WebDriver::BiDi::Protocol::Domain
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:73
+  def is_active; end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:79
+  def start(active_context: T.unsafe(nil), preset: T.unsafe(nil), entries: T.unsafe(nil), interval: T.unsafe(nil), features: T.unsafe(nil), threads: T.unsafe(nil)); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:100
+  def stop(discard: T.unsafe(nil)); end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:32
+class Selenium::WebDriver::BiDi::Protocol::MozProfiler::IsActiveResult < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:32
+  def active; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:32
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:32
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:32
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:32
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:32
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:32
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:32
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:36
+class Selenium::WebDriver::BiDi::Protocol::MozProfiler::StartParameters < ::Selenium::WebDriver::BiDi::Serialization::Union; end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+class Selenium::WebDriver::BiDi::Protocol::MozProfiler::StartParameters::Options < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+  def active_context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+  def entries; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+  def features; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+  def interval; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+  def threads; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:52
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+class Selenium::WebDriver::BiDi::Protocol::MozProfiler::StartParameters::Preset < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+  def active_context; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+  def preset; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:45
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:63
+class Selenium::WebDriver::BiDi::Protocol::MozProfiler::StopParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:63
+  def discard; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:63
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:63
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:63
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:63
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:63
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:63
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:63
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:69
+class Selenium::WebDriver::BiDi::Protocol::MozProfiler::StopResult < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:69
+  def path; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:69
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:69
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:69
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:69
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:69
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:69
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/moz_profiler.rb:69
+    def construct(**attributes); end
+  end
+end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -12891,72 +14402,72 @@ end
 #
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:30
 class Selenium::WebDriver::BiDi::Protocol::Session < ::Selenium::WebDriver::BiDi::Protocol::Domain
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:236
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:237
   def autodetect_proxy_configuration(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:233
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:234
   def capabilities_request(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:234
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:235
   def capability_request(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:237
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:238
   def direct_proxy_configuration(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-session-end
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:248
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:249
   def end_; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:238
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:239
   def manual_proxy_configuration(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-session-new
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:255
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:256
   def new(capabilities:); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:239
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:240
   def pac_proxy_configuration(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:235
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:236
   def proxy_configuration; end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-session-status
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:263
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:264
   def status; end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-session-subscribe
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:270
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:271
   def subscribe(events:, contexts: T.unsafe(nil), user_contexts: T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:240
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:241
   def system_proxy_configuration(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-session-unsubscribe
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:278
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:279
   def unsubscribe(events: T.unsafe(nil), subscriptions: T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:243
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:244
   def unsubscribe_by_attributes_request(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:242
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:243
   def unsubscribe_by_id_request(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:241
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:242
   def user_prompt_handler(**); end
 end
 
@@ -12964,39 +14475,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionautodetectproxyconfiguration
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
 class Selenium::WebDriver::BiDi::Protocol::Session::AutodetectProxyConfiguration < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
   def extensions; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
   def proxy_type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:93
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:113
     def construct(**attributes); end
   end
 end
@@ -13100,41 +14611,106 @@ end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-# @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessiondirectproxyconfiguration
+# @see https://w3c.github.io/webdriver-bidi/#type-session-CapabilityResponse
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
-class Selenium::WebDriver::BiDi::Protocol::Session::DirectProxyConfiguration < ::Selenium::WebDriver::BiDi::Serialization::Record
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+class Selenium::WebDriver::BiDi::Protocol::Session::CapabilityResponse < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+  def accept_insecure_certs; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+  def browser_name; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+  def browser_version; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
   def extensions; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
-  def proxy_type; end
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+  def platform_name; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+  def proxy; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+  def set_window_rect; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+  def unhandled_prompt_behavior; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+  def user_agent; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+  def web_socket_url; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:101
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+# @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessiondirectproxyconfiguration
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
+class Selenium::WebDriver::BiDi::Protocol::Session::DirectProxyConfiguration < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
+  def extensions; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
+  def proxy_type; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:121
     def construct(**attributes); end
   end
 end
@@ -13143,54 +14719,54 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionmanualproxyconfiguration
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
 class Selenium::WebDriver::BiDi::Protocol::Session::ManualProxyConfiguration < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
   def extensions; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
   def http_proxy; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
   def no_proxy; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
   def proxy_type; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
   def socks_proxy; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
   def socks_version; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
   def ssl_proxy; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:109
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:129
     def construct(**attributes); end
   end
 end
@@ -13199,36 +14775,36 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionnewparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:186
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:206
 class Selenium::WebDriver::BiDi::Protocol::Session::NewParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:186
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:206
   def capabilities; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:186
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:206
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:186
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:206
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:186
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:206
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:186
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:206
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:186
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:206
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:186
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:206
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:186
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:206
     def construct(**attributes); end
   end
 end
@@ -13237,100 +14813,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionnewresult
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
 class Selenium::WebDriver::BiDi::Protocol::Session::NewResult < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
   def capabilities; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
   def session_id; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
-    def construct(**attributes); end
-  end
-end
-
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-class Selenium::WebDriver::BiDi::Protocol::Session::NewResult::Capabilities < ::Selenium::WebDriver::BiDi::Serialization::Record
-  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
-  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def accept_insecure_certs; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def browser_name; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def browser_version; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def extensions; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def platform_name; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def proxy; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def set_window_rect; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def unhandled_prompt_behavior; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def user_agent; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-  def web_socket_url; end
-
-  class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-    def [](*_arg0); end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-    def extensible?; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-    def fields; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-    def inspect; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-    def members; end
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
-    def new(**kwargs); end
-
-    private
-
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:200
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:213
     def construct(**attributes); end
   end
 end
@@ -13339,42 +14854,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionpacproxyconfiguration
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
 class Selenium::WebDriver::BiDi::Protocol::Session::PacProxyConfiguration < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
   def extensions; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
   def proxy_autoconfig_url; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
   def proxy_type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:130
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:150
     def construct(**attributes); end
   end
 end
@@ -13383,22 +14898,22 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#type-session-ProxyConfiguration
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:66
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:86
 class Selenium::WebDriver::BiDi::Protocol::Session::ProxyConfiguration < ::Selenium::WebDriver::BiDi::Serialization::Union
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:83
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:103
     def autodetect(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:84
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:104
     def direct(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:85
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:105
     def manual(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:86
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:106
     def pac(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:87
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:107
     def system(**); end
   end
 end
@@ -13407,39 +14922,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionsocksproxyconfiguration
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
 class Selenium::WebDriver::BiDi::Protocol::Session::SocksProxyConfiguration < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
   def socks_proxy; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
   def socks_version; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:122
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:142
     def construct(**attributes); end
   end
 end
@@ -13448,39 +14963,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionstatusresult
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
 class Selenium::WebDriver::BiDi::Protocol::Session::StatusResult < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
   def message; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
   def ready; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:178
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:198
     def construct(**attributes); end
   end
 end
@@ -13489,42 +15004,42 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionsubscribeparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
 class Selenium::WebDriver::BiDi::Protocol::Session::SubscribeParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
   def contexts; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
   def events; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
   def user_contexts; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:179
     def construct(**attributes); end
   end
 end
@@ -13533,36 +15048,36 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionsubscriberesult
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:220
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:221
 class Selenium::WebDriver::BiDi::Protocol::Session::SubscribeResult < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:220
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:221
   def subscription; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:220
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:221
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:220
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:221
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:220
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:221
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:220
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:221
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:220
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:221
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:220
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:221
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:220
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:221
     def construct(**attributes); end
   end
 end
@@ -13571,39 +15086,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionsystemproxyconfiguration
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
 class Selenium::WebDriver::BiDi::Protocol::Session::SystemProxyConfiguration < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
   def extensions; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
   def proxy_type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:139
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:159
     def construct(**attributes); end
   end
 end
@@ -13617,36 +15132,36 @@ Selenium::WebDriver::BiDi::Protocol::Session::USER_PROMPT_HANDLER_TYPE = T.let(T
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#type-session-UnsubscribeByAttributesRequest
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:173
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
 class Selenium::WebDriver::BiDi::Protocol::Session::UnsubscribeByAttributesRequest < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:173
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
   def events; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:173
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:193
     def construct(**attributes); end
   end
 end
@@ -13655,36 +15170,36 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#type-session-UnsubscribeByIDRequest
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:168
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:188
 class Selenium::WebDriver::BiDi::Protocol::Session::UnsubscribeByIDRequest < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:168
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:188
   def subscriptions; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:168
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:188
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:168
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:188
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:168
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:188
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:168
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:188
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:168
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:188
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:168
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:188
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:168
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:188
     def construct(**attributes); end
   end
 end
@@ -13693,58 +15208,58 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-sessionunsubscribeparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:225
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:226
 class Selenium::WebDriver::BiDi::Protocol::Session::UnsubscribeParameters < ::Selenium::WebDriver::BiDi::Serialization::Union; end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#type-session-UserPromptHandler
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
 class Selenium::WebDriver::BiDi::Protocol::Session::UserPromptHandler < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
   def alert; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
   def before_unload; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
   def confirm; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
   def default; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
   def file; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
   def prompt; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:147
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/session.rb:167
     def construct(**attributes); end
   end
 end
@@ -14540,33 +16055,33 @@ end
 #
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:30
 class Selenium::WebDriver::BiDi::Protocol::WebExtension < ::Selenium::WebDriver::BiDi::Protocol::Domain
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:122
   def extension_archive_path(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:93
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:123
   def extension_base64_encoded(**); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:90
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:120
   def extension_data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:91
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:121
   def extension_path(**); end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-webExtension-install
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:99
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:129
   def install(extension_data:); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:94
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:124
   def moz; end
 
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-webExtension-uninstall
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:107
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:137
   def uninstall(extension:); end
 end
 
@@ -14574,39 +16089,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-webextensionextensionarchivepath
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
 class Selenium::WebDriver::BiDi::Protocol::WebExtension::ExtensionArchivePath < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
   def path; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
     def construct(**attributes); end
   end
 end
@@ -14615,39 +16130,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-webextensionextensionbase64encoded
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
 class Selenium::WebDriver::BiDi::Protocol::WebExtension::ExtensionBase64Encoded < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
   def type; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
   def value; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:67
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
     def construct(**attributes); end
   end
 end
@@ -14656,16 +16171,16 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-webextensionextensiondata
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:42
 class Selenium::WebDriver::BiDi::Protocol::WebExtension::ExtensionData < ::Selenium::WebDriver::BiDi::Serialization::Union
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:43
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
     def archive_path(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:44
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:52
     def base64(**); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:45
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:53
     def path(**); end
   end
 end
@@ -14674,39 +16189,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-webextensionextensionpath
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
 class Selenium::WebDriver::BiDi::Protocol::WebExtension::ExtensionPath < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
   def path; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
   def type; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:51
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:59
     def construct(**attributes); end
   end
 end
@@ -14715,39 +16230,39 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-webextensioninstallparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
 class Selenium::WebDriver::BiDi::Protocol::WebExtension::InstallParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
   def extension_data; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
   def extensions; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:85
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:34
     def construct(**attributes); end
   end
 end
@@ -14756,88 +16271,241 @@ end
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-webextensioninstallresult
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:83
 class Selenium::WebDriver::BiDi::Protocol::WebExtension::InstallResult < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:83
   def extension; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:83
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:83
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:83
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:83
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:83
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:83
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:75
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:83
     def construct(**attributes); end
   end
 end
 
 # @api private
-# moz: vendor variant of WebExtension, overriding commands with browser-specific params.
+# moz: vendor variant of WebExtension, with browser-specific commands and params.
 # Construct Moz.new(source) for a matching session; other sessions use WebExtension.
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:115
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:145
 class Selenium::WebDriver::BiDi::Protocol::WebExtension::Moz < ::Selenium::WebDriver::BiDi::Protocol::WebExtension
   # @api private
   # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
   # @see https://w3c.github.io/webdriver-bidi/#command-webExtension-install
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:119
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:149
   def install(extension_data:, allow_private_browsing: T.unsafe(nil), permanent: T.unsafe(nil)); end
+
+  # @api private
+  # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:160
+  def list_extensions; end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+class Selenium::WebDriver::BiDi::Protocol::WebExtension::MozExtensionInfo < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def hidden; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def id; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def is_active; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def is_system; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def manifest_version; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def name; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def policy; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def source_url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def temporarily_installed; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+  def version; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:98
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+class Selenium::WebDriver::BiDi::Protocol::WebExtension::MozExtensionPolicyInfo < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+  def background_scripts; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+  def base_url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+  def extension_url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+  def uuid; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:113
+    def construct(**attributes); end
+  end
+end
+
+# @api private
+# @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+class Selenium::WebDriver::BiDi::Protocol::WebExtension::MozListExtensionsResult < ::Selenium::WebDriver::BiDi::Serialization::Record
+  include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
+  extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+  def extensions; end
+
+  class << self
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+    def [](*_arg0); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+    def extensible?; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+    def fields; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+    def inspect; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+    def members; end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+    def new(**kwargs); end
+
+    private
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:92
+    def construct(**attributes); end
+  end
 end
 
 # @api private
 # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
 # @see https://w3c.github.io/webdriver-bidi/#cddl-type-webextensionuninstallparameters
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:80
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:88
 class Selenium::WebDriver::BiDi::Protocol::WebExtension::UninstallParameters < ::Selenium::WebDriver::BiDi::Serialization::Record
   include ::Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   extend ::Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:80
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:88
   def extension; end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:80
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:88
     def [](*_arg0); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:80
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:88
     def extensible?; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:80
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:88
     def fields; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:80
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:88
     def inspect; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:80
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:88
     def members; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:80
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:88
     def new(**kwargs); end
 
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:80
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/protocol/web_extension.rb:88
     def construct(**attributes); end
   end
 end
@@ -14917,51 +16585,72 @@ module Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
 
   private
 
+  # A `map` field (`{*text => <primitive>}`, e.g. script.NodeProperties.attributes) must arrive
+  # as an object whose every value matches the declared primitive. Keys are JSON object keys,
+  # so they are strings by construction. The Hash passes through unchanged once validated.
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:300
+  def check_map(field, raw); end
+
+  # Outbound mirror of check_map: a map-typed arg must be a Hash whose values are the
+  # declared primitive, so a caller mistake is a local ArgumentError.
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:216
+  def check_outbound_map(field, value); end
+
   # Outbound mirror of check_primitive: a primitive-typed arg (`string`/`integer`/…) must be
   # the matching Ruby type, so a caller mistake (a string width, a float count) is a local
   # ArgumentError here rather than a rejection the browser reports a round-trip later. A field
   # with no primitive descriptor (enum, ref, opaque) passes; lists are skipped, as inbound does.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:206
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:207
   def check_outbound_primitive(field, value); end
 
   # Outbound mirror of scalar_value: a bare map key must match one of the arm's primitives.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:175
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:176
   def check_outbound_scalar(field, value); end
 
   # Outbound mirror of check_shape: a list-typed arg must be an array, a scalar-shaped one
   # (enum or ref, not a list) must not — a local ArgumentError, not a wire round-trip.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:194
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:195
   def check_outbound_shape(field, value); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:281
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:290
   def check_primitive(field, raw); end
 
   # A declared list must arrive as an array; a scalar-shaped field (enum or ref, not a
   # list) must not. An opaque field carries no shape descriptor, so it passes through.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:261
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:270
   def check_shape(field, raw); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:288
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:321
   def enum_hash(field); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:336
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:369
   def extra(json_payload); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:213
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:221
   def fixed?(field); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:228
+  # The suffix of the error a map value earns, or nil when it conforms — shared by the inbound
+  # (SerializationError) and outbound (ArgumentError) checks so the two cannot drift apart. An
+  # unrecognized value primitive (none in PRIMITIVE_CHECKS) checks only the shape, matching the
+  # lenient default elsewhere.
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:311
+  def map_mismatch(field, value); end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:236
   def read(field, raw); end
 
   # Parses each element. A `scalar` field is a map encoded as `[key, value]` pairs, so
   # every element must be a 2-item pair — each is read as one, and a malformed entry is
   # rejected. Non-scalar lists recurse into nested lists; other elements deserialize.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:295
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:328
   def read_list(field, raw, klass); end
 
   # A map entry is a `[key, value]` pair. The key is `Ref / text` — an object key
@@ -14970,7 +16659,7 @@ module Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
   # there is rejected (object_only holds at the value position). A non-pair element is a
   # malformed entry and is rejected outright.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:312
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:345
   def read_map_entry(field, element, klass); end
 
   # Reads a ref-typed value into its class. A `scalar` position is an inline union with
@@ -14978,7 +16667,7 @@ module Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
   # passes through instead of being handed to the object_only union, but only when it
   # matches the arm's primitive (+scalar+ carries it). A list recurses per element.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:252
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:261
   def read_ref(field, raw); end
 
   # A bare scalar at a scalar-tolerant union position must match one of the union's
@@ -14987,14 +16676,14 @@ module Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
   # something to pass through. An unrecognized primitive (none in PRIMITIVE_CHECKS) is
   # left unchecked, matching the lenient default elsewhere.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:328
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:361
   def scalar_value(field, value); end
 
   # A nullable constant (`literal / null`) is caller-settable but its only non-null value is
   # the literal, so a value that is neither the literal nor nil (nil is handled above) is a
   # local error rather than a wire round-trip. A non-const field carries UNSET here and passes.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:186
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:187
   def validate_const(field, value); end
 
   # Checks a field that carries an actual value (neither omitted nor nil): a nullable-const
@@ -15008,23 +16697,23 @@ module Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
   # record or a value no union variant accepts is a caller error caught here, not a browser
   # round-trip. Shape is already checked, so a list is an Array.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:137
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:138
   def validate_ref(field, value); end
 
   # A [key, value] map entry: the key may be a variant or a bare scalar, the value is a variant.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:157
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:158
   def validate_ref_entry(field, klass, element); end
 
   # Mirrors read_list: a scalar field is a [key, value] map, a nested list recurses, otherwise
   # each element is checked against the ref.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:144
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:145
   def validate_ref_list(field, klass, list); end
 
   # A record ref must be an instance of that record; a union ref must be one the union accepts.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:168
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:169
   def validate_ref_value(field, klass, value); end
 
   # Checks each field's value: a required field cannot be omitted (UNSET), a non-nullable
@@ -15042,18 +16731,18 @@ module Selenium::WebDriver::BiDi::Serialization::Record::Deserializer
   # schema drift is visible (an extensible type keeps its extras silently — the spec sanctions
   # them). Tagged +:bidi_undeclared_property+ so a caller can silence it via +logger.ignore+.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:344
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:377
   def warn_undeclared(undeclared); end
 
   # A required field absent from the response cannot yield a valid typed object, so it raises
   # rather than substitute a placeholder or represent the field as omitted; a remote end that
   # lags the schema is handled by a project schema override, not by runtime tolerance.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:220
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:228
   def wire_value(field, json_payload); end
 end
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:274
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:283
 Selenium::WebDriver::BiDi::Serialization::Record::Deserializer::PRIMITIVE_CHECKS = T.let(T.unsafe(nil), Hash)
 
 # The check a schema primitive admits, by JSON kind rather than Ruby class: `number` is
@@ -15061,7 +16750,7 @@ Selenium::WebDriver::BiDi::Serialization::Record::Deserializer::PRIMITIVE_CHECKS
 # free to send `5` or `5.0` (JS has no int/float split), while a fractional value like
 # 1.5 is a real mismatch. A field with no primitive descriptor is left unchecked.
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:273
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:282
 Selenium::WebDriver::BiDi::Serialization::Record::Deserializer::WHOLE_FLOAT = T.let(T.unsafe(nil), Proc)
 
 # Named Field, not Member, to avoid colliding with +::Data#members+.
@@ -15079,6 +16768,9 @@ class Selenium::WebDriver::BiDi::Serialization::Record::Field < ::Data
 
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:32
   def list; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:32
+  def map; end
 
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:32
   def name; end
@@ -15118,11 +16810,11 @@ end
 
 # @api private
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:353
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:386
 module Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   # Omit UNSET fields; emit null only for nullable ones.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:364
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:397
   def as_json(*); end
 
   private
@@ -15133,11 +16825,11 @@ module Selenium::WebDriver::BiDi::Serialization::Record::Serializable
   # cannot slip past the guard and then reappear as a duplicate wire key once serialized. The
   # single gate every outbound path funnels through: +new+, +with+, and in-place mutation.
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:385
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:418
   def merge_extensions!(payload); end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:354
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/bidi/serialization/record.rb:387
     def as_json(value); end
   end
 end
@@ -16345,7 +18037,7 @@ class Selenium::WebDriver::Driver
   #   driver['someElementId']    #=> #<WebDriver::Element:0x1011c3b88>
   #   driver[:tag_name => 'div'] #=> #<WebDriver::Element:0x1011c3b88>
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:306
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:330
   def [](sel); end
 
   # @return [ActionBuilder]
@@ -16362,7 +18054,7 @@ class Selenium::WebDriver::Driver
 
   #   driver.all(class: 'bar') #=> [#<WebDriver::Element:0x1011c3b88, ...]
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:292
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:316
   def all(*args); end
 
   # Returns the WebDriver BiDi connection for this session.
@@ -16373,10 +18065,10 @@ class Selenium::WebDriver::Driver
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:100
   def bidi; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:312
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:336
   def browser; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:316
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:340
   def capabilities; end
 
   # Close the current window, or the browser if no windows are left.
@@ -16423,7 +18115,7 @@ class Selenium::WebDriver::Driver
 
   #   driver.first(id: 'foo')
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:286
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:310
   def first(*args); end
 
   # Opens the specified URL in the browser.
@@ -16433,6 +18125,17 @@ class Selenium::WebDriver::Driver
 
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:78
   def inspect; end
+
+  # Installs a browser extension from an unpacked directory, a packed extension (.xpi/.crx/.zip),
+  # or base64-encoded bytes; works with remote (Grid) sessions.
+  #
+  # @note Chromium requires a BiDi session and installs only unpacked directories
+  #   (SeleniumHQ/selenium#16541); Firefox falls back to the classic endpoint without BiDi.
+  # @param [String] path directory, packed extension, or base64-encoded bytes
+  # @return [WebExtension] the installed extension
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:290
+  def install_web_extension(*, **, &); end
 
   # @return [Manager]
   # @see Manager
@@ -16467,7 +18170,7 @@ class Selenium::WebDriver::Driver
   # @api private
   # @see SearchContext
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:325
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:349
   def ref; end
 
   # @return [Script]
@@ -16497,6 +18200,13 @@ class Selenium::WebDriver::Driver
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:173
   def title; end
 
+  # Uninstalls a browser extension installed with {#install_web_extension}.
+  #
+  # @param [WebExtension] extension the extension returned by {#install_web_extension}
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:300
+  def uninstall_web_extension(extension); end
+
   # Get the current window handle
   #
   # @return [String]
@@ -16514,16 +18224,16 @@ class Selenium::WebDriver::Driver
 
   private
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:344
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:368
   def add_extensions(browser); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:331
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:355
   def bridge; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:333
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:357
   def create_bridge(caps:, http_client:); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:340
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver.rb:364
   def screenshot; end
 
   class << self
@@ -16583,7 +18293,7 @@ module Selenium::WebDriver::DriverExtensions::HasAddons
   #
   # @param [String] id Identifier of installed addon
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver_extensions/has_addons.rb:42
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/driver_extensions/has_addons.rb:43
   def uninstall_addon(id); end
 end
 
@@ -17871,33 +19581,33 @@ module Selenium::WebDriver::FileReaper
   end
 end
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:26
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:25
 module Selenium::WebDriver::Firefox
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:50
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:48
     def path; end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:45
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:43
     def path=(path); end
   end
 end
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:38
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:36
 Selenium::WebDriver::Firefox::DEFAULT_ASSUME_UNTRUSTED_ISSUER = T.let(T.unsafe(nil), TrueClass)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:39
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:37
 Selenium::WebDriver::Firefox::DEFAULT_LOAD_NO_FOCUS_LIB = T.let(T.unsafe(nil), FalseClass)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:36
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:34
 Selenium::WebDriver::Firefox::DEFAULT_PORT = T.let(T.unsafe(nil), Integer)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:37
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:35
 Selenium::WebDriver::Firefox::DEFAULT_SECURE_SSL = T.let(T.unsafe(nil), FalseClass)
 
 # Mozilla Automation Team asked to only support 85
 # until WebDriver Bidi is available.
 #
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:43
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox.rb:41
 Selenium::WebDriver::Firefox::DEVTOOLS_VERSION = T.let(T.unsafe(nil), Integer)
 
 # Driver implementation for Firefox using GeckoDriver.
@@ -17917,40 +19627,6 @@ end
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/driver.rb:29
 Selenium::WebDriver::Firefox::Driver::EXTENSIONS = T.let(T.unsafe(nil), Array)
 
-# @api private
-#
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:27
-class Selenium::WebDriver::Firefox::Extension
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:30
-  def initialize(path); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:37
-  def write_to(extensions_dir); end
-
-  private
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:93
-  def applications_gecko_id(manifest); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:50
-  def create_root; end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:97
-  def name_and_version(manifest); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:63
-  def read_id(directory); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:67
-  def read_id_from_install_rdf(directory); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:85
-  def read_id_from_manifest_json(directory); end
-end
-
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/extension.rb:28
-Selenium::WebDriver::Firefox::Extension::NAMESPACE = T.let(T.unsafe(nil), String)
-
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:23
 module Selenium::WebDriver::Firefox::Features
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:32
@@ -17959,20 +19635,26 @@ module Selenium::WebDriver::Firefox::Features
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:36
   def commands(command); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:64
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:75
   def context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:60
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:71
   def context=(context); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:56
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:67
   def full_screenshot; end
 
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:40
   def install_addon(path, temporary); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:52
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:50
+  def install_web_extension(path, allow_private_browsing: T.unsafe(nil), permanent: T.unsafe(nil)); end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:46
   def uninstall_addon(id); end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:62
+  def uninstall_web_extension(extension_id); end
 end
 
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/features.rb:24
@@ -18118,7 +19800,7 @@ class Selenium::WebDriver::Firefox::Profile
   #
   #   driver = Selenium::WebDriver.for :firefox, :profile => profile
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:73
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:72
   def initialize(model = T.unsafe(nil)); end
 
   # Set a preference for this particular profile.
@@ -18126,84 +19808,66 @@ class Selenium::WebDriver::Firefox::Profile
   # @see http://kb.mozillazine.org/About:config_entries
   # @see http://preferential.mozdev.org/preferences.html
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:99
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:96
   def []=(key, value); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:131
-  def add_extension(path, name = T.unsafe(nil)); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:159
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:135
   def as_json; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:80
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:78
   def layout_on_disk; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:121
-  def load_no_focus_lib=(value); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:42
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:41
   def log_file; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:126
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:108
   def log_file=(file); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:42
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:41
   def name; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:111
-  def port=(port); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:137
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:113
   def proxy=(proxy); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:116
-  def secure_ssl=(value); end
 
   private
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:187
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:154
   def delete_extensions_cache(directory); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:191
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:158
   def delete_lock_files(directory); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:197
-  def extension_name_for(path); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:172
-  def install_extensions(directory); end
-
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:181
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:148
   def read_model_prefs; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:213
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:176
   def read_user_prefs(path); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:163
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:139
   def set_manual_proxy_preference(key, value); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:201
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:164
   def update_user_prefs_in(directory); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:230
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:193
   def write_prefs(prefs, path); end
 
   class << self
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:56
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:55
     def decoded(json); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:49
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:48
     def from_name(name); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:45
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:44
     def ini; end
   end
 end
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:32
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:31
 Selenium::WebDriver::Firefox::Profile::DEFAULT_PREFERENCES = T.let(T.unsafe(nil), Hash)
 
-# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:40
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:39
 Selenium::WebDriver::Firefox::Profile::LOCK_FILES = T.let(T.unsafe(nil), Array)
 
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/firefox/profile.rb:26
@@ -20018,7 +21682,7 @@ class Selenium::WebDriver::Remote::BiDiBridge < ::Selenium::WebDriver::Remote::B
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:27
   def bidi; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:76
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:86
   def close; end
 
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:27
@@ -20027,31 +21691,46 @@ class Selenium::WebDriver::Remote::BiDiBridge < ::Selenium::WebDriver::Remote::B
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:35
   def create_session(capabilities); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:48
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:58
   def get(url); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:53
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:63
   def go_back; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:58
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:68
   def go_forward; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:68
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:48
+  def install_web_extension(path); end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:78
   def quit; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:63
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:73
   def refresh; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:53
+  def uninstall_web_extension(id); end
 
   private
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:90
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:100
   def browsing_context; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:94
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:117
   def readiness_state; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:82
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:92
   def validated_socket_url; end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:104
+  def web_extension; end
+
+  # A directory only resolves on the machine running the browser, so upload it to the remote
+  # end and reference the returned path; archives and base64 bytes travel inline.
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:110
+  def web_extension_data(path); end
 end
 
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bidi_bridge.rb:29
@@ -20106,7 +21785,10 @@ class Selenium::WebDriver::Remote::Bridge
   def alert_text; end
 
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:596
-  def bidi; end
+  def bidi(*); end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:606
+  def bidi?; end
 
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:100
   def browser; end
@@ -20131,11 +21813,11 @@ class Selenium::WebDriver::Remote::Bridge
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:219
   def close; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:606
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:610
   def command_list; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:601
-  def connection; end
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:600
+  def connection(*); end
 
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:332
   def cookie(name); end
@@ -20268,6 +21950,9 @@ class Selenium::WebDriver::Remote::Bridge
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:31
   def http=(_arg0); end
 
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:602
+  def install_web_extension(*); end
+
   # cookies
   #
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:318
@@ -20379,6 +22064,9 @@ class Selenium::WebDriver::Remote::Bridge
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:163
   def title; end
 
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:603
+  def uninstall_web_extension(*); end
+
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:159
   def url; end
 
@@ -20404,30 +22092,36 @@ class Selenium::WebDriver::Remote::Bridge
 
   private
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:638
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:652
   def commands(command); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:659
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:673
   def element_id_from(id); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:634
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:616
+  def encode_extension(path); end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:648
   def escaper; end
 
   # executes a command on the remote server.
   #
   # @return [WebDriver::Remote::Response]
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:618
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:632
   def execute(command, opts = T.unsafe(nil), command_hash = T.unsafe(nil)); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:667
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:681
   def prepare_capabilities_payload(capabilities); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:663
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:677
   def shadow_root_id_from(id); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:642
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:656
   def unwrap_script_result(arg); end
+
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:601
+  def web_extension(*); end
 
   class << self
     # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/bridge.rb:38
@@ -20698,13 +22392,13 @@ module Selenium::WebDriver::Remote::Features
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:40
   def commands(command); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:70
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:71
   def delete_downloadable_files; end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:66
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:67
   def download_file(name); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:62
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:63
   def downloadable_files; end
 
   # Fires a custom session event to the remote server event bus.
@@ -20724,13 +22418,13 @@ module Selenium::WebDriver::Remote::Features
   #     error: "Element not found"
   #   })
   #
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:92
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:93
   def fire_session_event(event_type, payload = T.unsafe(nil)); end
 
   # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:44
   def upload(local_file); end
 
-  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:54
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/remote/features.rb:48
   def upload_if_necessary(keys); end
 end
 
@@ -22084,6 +23778,22 @@ Selenium::WebDriver::Wait::DEFAULT_INTERVAL = T.let(T.unsafe(nil), Float)
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/wait.rb:23
 Selenium::WebDriver::Wait::DEFAULT_TIMEOUT = T.let(T.unsafe(nil), Integer)
 
+# A browser extension installed via Driver#install_web_extension.
+# Wraps the identifier the browser assigned; pass it to Driver#uninstall_web_extension.
+#
+# pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/web_extension.rb:26
+class Selenium::WebDriver::WebExtension
+  # @api private
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/web_extension.rb:37
+  def initialize(id); end
+
+  # @return [String] identifier assigned to the extension by the browser
+  #
+  # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/web_extension.rb:31
+  def id; end
+end
+
 # @api private
 #
 # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/websocket_connection.rb:25
@@ -22383,15 +24093,26 @@ module Selenium::WebDriver::Zipper
     # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/zipper.rb:58
     def zip(path); end
 
+    # Backwards-compatible name for the file-only behavior #zip_root now subsumes.
+    #
     # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/zipper.rb:69
     def zip_file(path); end
 
+    # Keeps +path+ (a file or directory) as the archive's single top-level entry, unlike #zip
+    # which flattens a directory's contents; the Grid upload endpoint returns that one entry's path.
+    #
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/zipper.rb:64
+    def zip_root(path); end
+
     private
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/zipper.rb:92
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/zipper.rb:96
     def add_zip_entry(zip, file, entry_name); end
 
-    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/zipper.rb:80
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/zipper.rb:73
+    def encode_zip(path, base); end
+
+    # pkg:gem/selenium-webdriver#lib/selenium/webdriver/common/zipper.rb:84
     def with_tmp_zip(&blk); end
   end
 end
