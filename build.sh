@@ -16,7 +16,7 @@ export RAILS_MASTER_KEY
 export RAILS_ASSET_HOST
 export BUNDLER_VERSION
 
-gem install bundler
+gem install bundler -v "${BUNDLER_VERSION}" --no-document
 
 if [[ ${RAILS_ENV} == "production" ]]; then
 	bundle config set without "development test"

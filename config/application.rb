@@ -21,6 +21,13 @@ module ProjectAirona
     # get env variables from credentials
     config.before_configuration do
       Rails.application.credentials.config.each do |key, value|
+        allowlist = %w(
+          DATABASE_URL
+          RAILS_HOST
+          REDIS_URL
+        )
+        next unless allowlist.include?(key.to_s)
+
         ENV.store(key.to_s, value.to_s)
       end
     end
