@@ -315,7 +315,7 @@ GEM
     rubydex (0.4.3-x86_64-linux)
     rubyzip (3.7.0)
     securerandom (0.4.1)
-    selenium-webdriver (4.51.0)
+    selenium-webdriver (4.52.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rubyzip (>= 1.2.2, < 4.0)
@@ -532,7 +532,7 @@ CHECKSUMS
   rubydex (0.4.3-x86_64-linux) sha256=550138ee5a5c005066560321cfe003130a111468821d8ef7cf30826742b1c2f5
   rubyzip (3.7.0) sha256=65c19294da75297a939006f3516deacc33185fbd721ff1954f7a231db6d3e121
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
-  selenium-webdriver (4.51.0) sha256=09edf1b7fc360e0570bac609676f804ed527fe0b2f285e03233561e29b0ec105
+  selenium-webdriver (4.52.0) sha256=5d45ba100ea8b57f5a8c25979a636d48b4c60c39973478930d78e884bdeecd2d
   sorbet (0.6.13594) sha256=e7dd47363a6961b8f9e6b0cebf40f536adb4f14324b9442da2bef53ae8b673a5
   sorbet-runtime (0.6.13594) sha256=cf26f625a84c73d0d4d151fc19cafa1a6c44ad1814f2454e545893773eddd5e3
   sorbet-static (0.6.13594-x86_64-linux) sha256=194ac149c1def335fdb010db846bf581849d62249eade8fa3961530989e07038
