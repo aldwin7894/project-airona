@@ -22,7 +22,7 @@
     "@rails/actioncable": "^8.1.401",
     "@stimulus-components/rails-nested-form": "^5.0.0",
     "alpinejs": "^3.17.5",
-    "chart.js": "^4.6.1",
+    "chart.js": "^4.6.2",
     "stimulus-vite-helpers": "^3.1.0",
     "tippy.js": "^6.3.7"
   },
@@ -33,7 +33,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.20",
     "@types/node": "^26.6.6",
-    "@typescript-eslint/parser": "^8.73.0",
+    "@typescript-eslint/parser": "^8.74.0",
     "autoprefixer": "^10.7.0",
     "cssnano": "^9.9.0",
     "cssnano-preset-advanced": "^10.0.0",
@@ -56,7 +56,7 @@
     "sass-embedded": "1.108.2",
     "tailwindcss": "^3.4.19",
     "tailwindcss-animatecss": "^3.0.5",
-    "terser": "^5.51.2",
+    "terser": "^5.51.4",
     "theme-change": "^3.0.4",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.73.0",
@@ -68,5 +68,9 @@
     "node": "26.13.1",
     "npm": ">= 10.9"
   },
-  "packageManager": "yarn@4.19.0"
+  "packageManager": "yarn@4.19.0",
+  "resolutions": {
+    "postcss-selector-parser@^6.1.1": "^6.1.6",
+    "postcss-selector-parser@6.0.10": "^6.1.6"
+  }
 }
